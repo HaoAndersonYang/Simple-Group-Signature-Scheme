@@ -1,6 +1,4 @@
 public class Group {
-    public LargeInteger base;
+    public static LargeInteger base = new LargeInteger("1000");
     public LargeInteger accumulator;
-
-
 }
