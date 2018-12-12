@@ -38,7 +38,7 @@ public class LargeInteger implements Comparable<LargeInteger> {
             return new LargeInteger();
         }
         LargeInteger base = this.mod(module);
-        LargeInteger result = new LargeInteger();
+        LargeInteger result = new LargeInteger("1");
         while (exponent.compareTo(new LargeInteger()) > 0) {
             if (exponent.value.getLast() == 1) {
                 result = (result.multiply(base)).mod(module);
@@ -113,7 +113,7 @@ public class LargeInteger implements Comparable<LargeInteger> {
             }
             diff.offerFirst((byte) a);
         }
-        while (diff.peekFirst()==0){
+        while (diff.peekFirst() == 0) {
             diff.removeFirst();
         }
         return new LargeInteger(diff);
@@ -152,8 +152,8 @@ public class LargeInteger implements Comparable<LargeInteger> {
             sum.offerFirst((byte) 1);
         }
         LargeInteger res = new LargeInteger(sum);
-        while (res.compareTo(Group.base) > 0) {
-            res = res.subtract(Group.base);
+        while (res.compareTo(Group.N) > 0) {
+            res = res.subtract(Group.N);
         }
         return res;
     }
@@ -163,8 +163,11 @@ public class LargeInteger implements Comparable<LargeInteger> {
     }
 
     public LargeInteger mod(LargeInteger module) {
-        //TODO: IMPLEMENT
-        return new LargeInteger();
+        LargeInteger res = new LargeInteger(this);
+        while (res.compareTo(module) > 0) {
+            res = res.subtract(module);
+        }
+        return res;
     }
 
     @Override
