@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 public class Group {
-    public static LargeInteger N = new LargeInteger("111111111111111111");
+    public static LargeInteger N = new LargeInteger("1111111111111111111111111111111111111111111111111111111111111");
     public static LargeInteger accumulator = new LargeInteger("10");//Initial value is base
     //2
 

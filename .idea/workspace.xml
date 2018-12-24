@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a1b5f687-b215-48c0-a1c3-c49f78694e25" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/One Way Accumulator Scheme/src/BinaryConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/One Way Accumulator Scheme/src/Group.java" beforeDir="false" afterPath="$PROJECT_DIR$/One Way Accumulator Scheme/src/Group.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/One Way Accumulator Scheme/src/LargeInteger.java" beforeDir="false" afterPath="$PROJECT_DIR$/One Way Accumulator Scheme/src/LargeInteger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/One Way Accumulator Scheme/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/One Way Accumulator Scheme/src/Main.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -11,31 +17,76 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="Simple-Group-Signature-Scheme" />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/One Way Accumulator Scheme/src/LargeInteger.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="269">
-              <caret line="115" column="48" lean-forward="true" selection-start-line="115" selection-start-column="48" selection-end-line="115" selection-end-column="48" />
+            <state relative-caret-position="351">
+              <caret line="151" column="13" selection-start-line="151" selection-start-column="13" selection-end-line="151" selection-end-column="13" />
               <folding>
-                <element signature="method#LargeInteger#2;class#LargeInteger#0" />
-                <element signature="e#818#819#0" expanded="true" />
-                <element signature="e#837#838#0" expanded="true" />
-                <element signature="method#insertAtLast#1;class#LargeInteger#0" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#1481#1482#0" expanded="true" />
+                <element signature="e#2502#2503#0" expanded="true" />
                 <element signature="method#modular_pow#0;class#LargeInteger#0" />
                 <element signature="method#shiftRight#0;class#LargeInteger#0" />
+                <element signature="method#multiply#0;class#LargeInteger#0" />
+                <element signature="method#split#0;class#LargeInteger#0" />
+                <element signature="e#4718#4757#0" />
+                <element signature="method#shiftLeftbyn#0;class#LargeInteger#0" />
                 <element signature="method#subtract#0;class#LargeInteger#0" />
-                <element signature="method#removeLast#1;class#LargeInteger#0" />
-                <element signature="method#add#0;class#LargeInteger#0" />
-                <element signature="method#mod#0;class#LargeInteger#0" />
+                <element signature="method#removeFirst#0;class#LargeInteger#0" />
+                <element signature="e#7723#7724#0" expanded="true" />
+                <element signature="e#8610#8611#0" expanded="true" />
                 <element signature="method#compareTo#0;class#LargeInteger#0" />
+                <element signature="e#9401#9402#0" expanded="true" />
+                <element signature="e#9429#9430#0" expanded="true" />
+                <element signature="e#9469#9470#0" expanded="true" />
+                <element signature="e#9496#9497#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/One Way Accumulator Scheme/src/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="161">
+              <caret line="32" column="18" lean-forward="true" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="18" />
+              <folding>
+                <marker date="1545655692922" expanded="true" signature="1397:1635" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/One Way Accumulator Scheme/src/Group.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="228">
+              <caret line="12" column="29" lean-forward="true" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>ins</find>
+      <find>LargeInteger</find>
+      <find>mod</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -44,6 +95,10 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/One Way Accumulator Scheme/src/LargeInteger.kt" />
+        <option value="$PROJECT_DIR$/One Way Accumulator Scheme/src/util/BinaryConverter.java" />
+        <option value="$PROJECT_DIR$/One Way Accumulator Scheme/src/Group.java" />
+        <option value="$PROJECT_DIR$/One Way Accumulator Scheme/src/BinaryConverter.java" />
+        <option value="$PROJECT_DIR$/One Way Accumulator Scheme/src/Main.java" />
         <option value="$PROJECT_DIR$/One Way Accumulator Scheme/src/LargeInteger.java" />
       </list>
     </option>
@@ -54,12 +109,14 @@
     <option name="width" value="1400" />
     <option name="height" value="1000" />
   </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -82,12 +139,14 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545660926065" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
@@ -102,6 +161,20 @@
         </RuleState>
       </list>
     </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="One Way Accumulator Scheme" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -120,25 +193,28 @@
       <workItem from="1545152817698" duration="2266000" />
       <workItem from="1545157798805" duration="599000" />
       <workItem from="1545181122195" duration="13298000" />
+      <workItem from="1545607527919" duration="23176000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18701000" />
+    <option name="totallyTimeSpent" value="41877000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2249467" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.498452" visible="true" weight="0.22707888" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Favorites" order="6" sideWeight="0.501548" side_tool="true" weight="0.22707888" />
+      <window_info anchor="bottom" id="Messages" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32917964" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32917964" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -170,29 +246,57 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/One Way Accumulator Scheme/src/BinaryConverter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+          <folding>
+            <element signature="e#245#246#0" expanded="true" />
+            <element signature="e#274#275#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/One Way Accumulator Scheme/src/Group.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        <state relative-caret-position="228">
+          <caret line="12" column="29" lean-forward="true" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/One Way Accumulator Scheme/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="32" column="18" lean-forward="true" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="18" />
+          <folding>
+            <marker date="1545655692922" expanded="true" signature="1397:1635" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/One Way Accumulator Scheme/src/LargeInteger.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="115" column="48" lean-forward="true" selection-start-line="115" selection-start-column="48" selection-end-line="115" selection-end-column="48" />
+        <state relative-caret-position="351">
+          <caret line="151" column="13" selection-start-line="151" selection-start-column="13" selection-end-line="151" selection-end-column="13" />
           <folding>
-            <element signature="method#LargeInteger#2;class#LargeInteger#0" />
-            <element signature="e#818#819#0" expanded="true" />
-            <element signature="e#837#838#0" expanded="true" />
-            <element signature="method#insertAtLast#1;class#LargeInteger#0" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#1481#1482#0" expanded="true" />
+            <element signature="e#2502#2503#0" expanded="true" />
             <element signature="method#modular_pow#0;class#LargeInteger#0" />
             <element signature="method#shiftRight#0;class#LargeInteger#0" />
+            <element signature="method#multiply#0;class#LargeInteger#0" />
+            <element signature="method#split#0;class#LargeInteger#0" />
+            <element signature="e#4718#4757#0" />
+            <element signature="method#shiftLeftbyn#0;class#LargeInteger#0" />
             <element signature="method#subtract#0;class#LargeInteger#0" />
-            <element signature="method#removeLast#1;class#LargeInteger#0" />
-            <element signature="method#add#0;class#LargeInteger#0" />
-            <element signature="method#mod#0;class#LargeInteger#0" />
+            <element signature="method#removeFirst#0;class#LargeInteger#0" />
+            <element signature="e#7723#7724#0" expanded="true" />
+            <element signature="e#8610#8611#0" expanded="true" />
             <element signature="method#compareTo#0;class#LargeInteger#0" />
+            <element signature="e#9401#9402#0" expanded="true" />
+            <element signature="e#9429#9430#0" expanded="true" />
+            <element signature="e#9469#9470#0" expanded="true" />
+            <element signature="e#9496#9497#0" expanded="true" />
           </folding>
         </state>
       </provider>

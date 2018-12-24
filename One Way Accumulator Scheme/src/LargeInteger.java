@@ -1,19 +1,40 @@
-import java.util.LinkedList;
+import java.sql.SQLSyntaxErrorException;
+import java.util.Iterator;
+import java.util.Spliterator;
+import java.util.function.Consumer;
 
 // Assume no leading zero
-public class LargeInteger implements Comparable<LargeInteger> {
+public class LargeInteger implements Comparable<LargeInteger>, Iterator<Byte> {
 
     public Byte[] value = new Byte[1000];
     public int head = 0;//value[head] is the head
     public int tail = 0;//value[tail] is place to insert
     public int size = 0;
 
-    public LargeInteger(Byte[] value) {
-        this.value = value;
-    }
 
     public LargeInteger(LargeInteger li) {
         this.value = li.value.clone();
+        this.head = li.head;
+        this.tail = li.tail;
+        this.size = li.size;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        if (tail < head) {
+            for (int i = head; i < value.length; i++) {
+                sb.append(value[i]);
+            }
+            for (int i = 0; i < tail; i++) {
+                sb.append(value[i]);
+            }
+        } else {
+            for (int i = head; i < tail; i++) {
+                sb.append(value[i]);
+            }
+        }
+        return sb.toString();
     }
 
     public LargeInteger(String input) {
@@ -32,7 +53,7 @@ public class LargeInteger implements Comparable<LargeInteger> {
         this.insertAtHead((byte) i);
     }
 
-    private void insertAtLast(byte insert) {
+    public void insertAtLast(byte insert) {
         value[tail] = insert;
         tail += 1;
         size += 1;
@@ -87,7 +108,7 @@ public class LargeInteger implements Comparable<LargeInteger> {
         LargeInteger result = new LargeInteger("1");
         while (exponent.compareTo(new LargeInteger()) > 0) {
             if (exponent.value[exponent.tail - 1] != 0) {
-                result = (result.multiply(base)).mod(module);
+                result = (result.KAmultiply(base)).mod(module);
             }
             exponent = exponent.shiftRight();
             base = base.square().mod(module);
@@ -106,17 +127,50 @@ public class LargeInteger implements Comparable<LargeInteger> {
         return result;
     }
 
-    //https://en.wikipedia.org/wiki/Multiplication_algorithm#Peasant_or_binary_multiplication
-    //Assuming both have same number of bits
-    public LargeInteger multiply(LargeInteger multiplier) {
-        if (this.size == 1) {
+    //Multiple-precision classical multiplication
+    public LargeInteger CMmultiply(LargeInteger multiplier) {
+        LargeInteger result = new LargeInteger();
+        for (int i = 0; i < this.size + multiplier.size; i++) {
+            result.insertAtLast((byte) 0);
+        }
+        for (int i = this.size - 1; i >= 0; i--) {
+            System.out.println();
+            int indexi = this.size - i - 1;
+            System.out.println(indexi + " " + this.value[i]);
+            byte carry = 0;
+            for (int j = multiplier.size - 1; j >= 0; j--) {
+                int indexj = multiplier.size - j - 1;
+                System.out.println(indexj + " " + multiplier.value[j]);
+                byte a = result.value[result.tail - indexi - indexj - 1];
+                byte b = (byte) (multiplier.value[j] & this.value[i]);
+//                byte b = (byte) (multiplier.value[j] * this.value[i]);
+                byte su = (byte) (a ^ b ^ carry);
+//                byte su = (byte) ((a + b + carry) % 2);
+                carry = (byte) ((a & b) ^ (carry & (a ^ b)));
+//                carry = (byte) ((a + b + carry) / 2);
+                result.value[result.tail - indexi - indexj - 1] = su;
+            }
+            result.value[result.tail - multiplier.size - indexi - 1] = carry;
+            System.out.println(result);
+        }
+        return result;
+    }
+
+    //Karatsuba Algorithm
+    public LargeInteger KAmultiply(LargeInteger multiplier) {
+        if (this.size <= 1) {
             return new LargeInteger(this.value[head] & multiplier.value[head]);
         }
         LargeInteger[] ALR = this.split();
         LargeInteger[] BLR = multiplier.split();
-        LargeInteger d1 = ALR[0].multiply(BLR[0]);
-        LargeInteger d0 = ALR[1].multiply(BLR[1]);
-        LargeInteger d01 = (ALR[0].add(ALR[1])).multiply((BLR[0].add(BLR[1])));
+        System.out.println(this);
+        System.out.println(ALR[0] + " " + ALR[1]);
+        System.out.println(multiplier);
+        System.out.println(BLR[0] + " " + BLR[1]);
+        System.out.println();
+        LargeInteger d1 = ALR[0].KAmultiply(BLR[0]);
+        LargeInteger d0 = ALR[1].KAmultiply(BLR[1]);
+        LargeInteger d01 = (ALR[0].add(ALR[1])).KAmultiply((BLR[0].add(BLR[1])));
         return d1.shiftLeftbyn(this.size - 1).add((d01.subtract(d0).subtract(d1))).shiftLeftbyn((this.size - 1) / 2).add(d0);
     }
 
@@ -128,14 +182,15 @@ public class LargeInteger implements Comparable<LargeInteger> {
         result[1] = new LargeInteger(this);
         result[1].head = tail / 2;
         result[1].size = this.size - result[0].size;
+//        System.out.println(result[1].size);
         return result;
     }
 
-    public LargeInteger shiftLeft() {
-        LargeInteger result = new LargeInteger(this);
-        result.insertAtLast((byte) 0);
-        return result;
-    }
+//    public LargeInteger shiftLeft() {
+//        LargeInteger result = new LargeInteger(this);
+//        result.insertAtLast((byte) 0);
+//        return result;
+//    }
 
 
     public LargeInteger shiftLeftbyn(int n) {
@@ -215,7 +270,7 @@ public class LargeInteger implements Comparable<LargeInteger> {
     }
 
     public LargeInteger square() {
-        return this.multiply(this);
+        return this.KAmultiply(this);
     }
 
     public LargeInteger mod(LargeInteger module) {
@@ -251,5 +306,15 @@ public class LargeInteger implements Comparable<LargeInteger> {
             }
         }
         return result;
+    }
+
+    @Override
+    public boolean hasNext() {
+        return false;
+    }
+
+    @Override
+    public Byte next() {
+        return null;
     }
 }
