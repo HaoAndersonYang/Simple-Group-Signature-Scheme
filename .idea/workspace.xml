@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a1b5f687-b215-48c0-a1c3-c49f78694e25" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/One Way Accumulator Scheme/src/BinaryConverter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/One Way Accumulator Scheme/src/Group.java" beforeDir="false" afterPath="$PROJECT_DIR$/One Way Accumulator Scheme/src/Group.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/One Way Accumulator Scheme/src/Bons.java" beforeDir="false" afterPath="$PROJECT_DIR$/One Way Accumulator Scheme/src/Bons.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/One Way Accumulator Scheme/src/LargeInteger.java" beforeDir="false" afterPath="$PROJECT_DIR$/One Way Accumulator Scheme/src/LargeInteger.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/One Way Accumulator Scheme/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/One Way Accumulator Scheme/src/Main.java" afterDir="false" />
     </list>
@@ -22,30 +19,34 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/One Way Accumulator Scheme/src/Group.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="209">
+              <caret line="11" column="23" lean-forward="true" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/One Way Accumulator Scheme/src/LargeInteger.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="351">
-              <caret line="151" column="13" selection-start-line="151" selection-start-column="13" selection-end-line="151" selection-end-column="13" />
+            <state relative-caret-position="437">
+              <caret line="89" column="34" lean-forward="true" selection-start-line="89" selection-start-column="34" selection-end-line="89" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1438#1439#0" expanded="true" />
                 <element signature="e#1481#1482#0" expanded="true" />
+                <element signature="e#2459#2460#0" expanded="true" />
                 <element signature="e#2502#2503#0" expanded="true" />
-                <element signature="method#modular_pow#0;class#LargeInteger#0" />
-                <element signature="method#shiftRight#0;class#LargeInteger#0" />
-                <element signature="method#multiply#0;class#LargeInteger#0" />
-                <element signature="method#split#0;class#LargeInteger#0" />
-                <element signature="e#4718#4757#0" />
-                <element signature="method#shiftLeftbyn#0;class#LargeInteger#0" />
-                <element signature="method#subtract#0;class#LargeInteger#0" />
-                <element signature="method#removeFirst#0;class#LargeInteger#0" />
+                <element signature="e#7689#7690#0" expanded="true" />
                 <element signature="e#7723#7724#0" expanded="true" />
+                <element signature="e#8566#8567#0" expanded="true" />
                 <element signature="e#8610#8611#0" expanded="true" />
-                <element signature="method#compareTo#0;class#LargeInteger#0" />
-                <element signature="e#9401#9402#0" expanded="true" />
-                <element signature="e#9429#9430#0" expanded="true" />
-                <element signature="e#9469#9470#0" expanded="true" />
-                <element signature="e#9496#9497#0" expanded="true" />
+                <element signature="e#9590#9591#0" expanded="true" />
+                <element signature="e#9618#9619#0" expanded="true" />
+                <element signature="e#9658#9659#0" expanded="true" />
+                <element signature="e#9685#9686#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -54,20 +55,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/One Way Accumulator Scheme/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="32" column="18" lean-forward="true" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="18" />
-              <folding>
-                <marker date="1545655692922" expanded="true" signature="1397:1635" ph="..." />
-              </folding>
+            <state relative-caret-position="672">
+              <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/One Way Accumulator Scheme/src/Group.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/One Way Accumulator Scheme/src/Bons.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="12" column="29" lean-forward="true" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
+            <state relative-caret-position="247">
+              <caret line="46" column="39" lean-forward="true" selection-start-line="46" selection-start-column="39" selection-end-line="46" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -86,9 +84,37 @@
       <find>ins</find>
       <find>LargeInteger</find>
       <find>mod</find>
+      <find>tail</find>
+      <find>index</find>
+      <find>removela</find>
+      <find>large</find>
+      <find>kra</find>
+      <find>mult</find>
+      <find>subtract</find>
+      <find>print</find>
+      <find>OVERFLOW</find>
+      <find>next()</find>
+      <find>overflow</find>
+      <find>insertAtLast</find>
+      <find>nex</find>
+      <find>reset</find>
+      <find>insert</find>
+      <find>size</find>
+      <find>next</find>
+      <find>mag</find>
+      <find>strip</find>
+      <find>striplead</find>
+      <find>shift</find>
+      <find>shiftRight</find>
+      <find>shiftRightImpl</find>
+      <find>shiftright</find>
+      <find>insertathead</find>
+      <find>kara</find>
+      <find>remove</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
+    <option name="UPDATE_TYPE" value="REBASE" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
@@ -96,10 +122,11 @@
       <list>
         <option value="$PROJECT_DIR$/One Way Accumulator Scheme/src/LargeInteger.kt" />
         <option value="$PROJECT_DIR$/One Way Accumulator Scheme/src/util/BinaryConverter.java" />
-        <option value="$PROJECT_DIR$/One Way Accumulator Scheme/src/Group.java" />
         <option value="$PROJECT_DIR$/One Way Accumulator Scheme/src/BinaryConverter.java" />
+        <option value="$PROJECT_DIR$/One Way Accumulator Scheme/src/Group.java" />
         <option value="$PROJECT_DIR$/One Way Accumulator Scheme/src/Main.java" />
         <option value="$PROJECT_DIR$/One Way Accumulator Scheme/src/LargeInteger.java" />
+        <option value="$PROJECT_DIR$/One Way Accumulator Scheme/src/Bons.java" />
       </list>
     </option>
   </component>
@@ -146,7 +173,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545660926065" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546089894457" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
@@ -193,28 +220,44 @@
       <workItem from="1545152817698" duration="2266000" />
       <workItem from="1545157798805" duration="599000" />
       <workItem from="1545181122195" duration="13298000" />
-      <workItem from="1545607527919" duration="23176000" />
+      <workItem from="1545607527919" duration="27857000" />
+      <workItem from="1545698866254" duration="38910000" />
+      <workItem from="1545801762546" duration="23587000" />
+      <workItem from="1545874741810" duration="12554000" />
+      <workItem from="1545896348683" duration="3573000" />
+      <workItem from="1545918139623" duration="7235000" />
+      <workItem from="1545961034329" duration="4914000" />
+      <workItem from="1545968242544" duration="772000" />
+      <workItem from="1545970002999" duration="2956000" />
+      <workItem from="1546005489726" duration="17802000" />
     </task>
+    <task id="LOCAL-00001" summary="Implemented the Binary Converter and the Multiple Precision Classical Multiplication">
+      <created>1545660978217</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1545660978217</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41877000" />
+    <option name="totallyTimeSpent" value="158861000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.498452" visible="true" weight="0.22707888" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.498452" visible="true" weight="0.25053304" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" sideWeight="0.501548" side_tool="true" weight="0.22707888" />
-      <window_info anchor="bottom" id="Messages" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32917964" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32917964" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32848233" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -224,6 +267,7 @@
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.32917964" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -238,66 +282,73 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Implemented the Binary Converter and the Multiple Precision Classical Multiplication" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented the Binary Converter and the Multiple Precision Classical Multiplication" />
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/One Way Accumulator Scheme/src/Bons.java">
+    <entry file="file://$PROJECT_DIR$/One Way Accumulator Scheme/src/BinaryConverter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="87">
-          <caret line="3" column="1" lean-forward="true" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+        <state>
+          <caret column="30" selection-start-column="30" selection-end-column="30" />
+          <folding>
+            <element signature="e#245#246#0" expanded="true" />
+            <element signature="e#305#306#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/One Way Accumulator Scheme/src/BinaryConverter.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_192/src.zip!/java/math/BigInteger.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        <state relative-caret-position="114">
+          <caret line="215" column="35" lean-forward="true" selection-start-line="215" selection-start-column="35" selection-end-line="215" selection-end-column="35" />
           <folding>
-            <element signature="e#245#246#0" expanded="true" />
-            <element signature="e#274#275#0" expanded="true" />
+            <element signature="e#23600#23601#0" expanded="true" />
+            <element signature="e#23649#23650#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/One Way Accumulator Scheme/src/Group.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" column="29" lean-forward="true" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
+        <state relative-caret-position="209">
+          <caret line="11" column="23" lean-forward="true" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/One Way Accumulator Scheme/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="32" column="18" lean-forward="true" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="18" />
-          <folding>
-            <marker date="1545655692922" expanded="true" signature="1397:1635" ph="..." />
-          </folding>
+        <state relative-caret-position="672">
+          <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/One Way Accumulator Scheme/src/LargeInteger.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="151" column="13" selection-start-line="151" selection-start-column="13" selection-end-line="151" selection-end-column="13" />
+        <state relative-caret-position="437">
+          <caret line="89" column="34" lean-forward="true" selection-start-line="89" selection-start-column="34" selection-end-line="89" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1438#1439#0" expanded="true" />
             <element signature="e#1481#1482#0" expanded="true" />
+            <element signature="e#2459#2460#0" expanded="true" />
             <element signature="e#2502#2503#0" expanded="true" />
-            <element signature="method#modular_pow#0;class#LargeInteger#0" />
-            <element signature="method#shiftRight#0;class#LargeInteger#0" />
-            <element signature="method#multiply#0;class#LargeInteger#0" />
-            <element signature="method#split#0;class#LargeInteger#0" />
-            <element signature="e#4718#4757#0" />
-            <element signature="method#shiftLeftbyn#0;class#LargeInteger#0" />
-            <element signature="method#subtract#0;class#LargeInteger#0" />
-            <element signature="method#removeFirst#0;class#LargeInteger#0" />
+            <element signature="e#7689#7690#0" expanded="true" />
             <element signature="e#7723#7724#0" expanded="true" />
+            <element signature="e#8566#8567#0" expanded="true" />
             <element signature="e#8610#8611#0" expanded="true" />
-            <element signature="method#compareTo#0;class#LargeInteger#0" />
-            <element signature="e#9401#9402#0" expanded="true" />
-            <element signature="e#9429#9430#0" expanded="true" />
-            <element signature="e#9469#9470#0" expanded="true" />
-            <element signature="e#9496#9497#0" expanded="true" />
+            <element signature="e#9590#9591#0" expanded="true" />
+            <element signature="e#9618#9619#0" expanded="true" />
+            <element signature="e#9658#9659#0" expanded="true" />
+            <element signature="e#9685#9686#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/One Way Accumulator Scheme/src/Bons.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="46" column="39" lean-forward="true" selection-start-line="46" selection-start-column="39" selection-end-line="46" selection-end-column="39" />
         </state>
       </provider>
     </entry>

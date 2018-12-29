@@ -30,7 +30,7 @@ public class Main {
 //        StringBuilder sb = new StringBuilder();
         int randoma = (int) (Math.random() * Math.pow(10, 2));
 //        System.out.println(randoma);
-        LargeInteger a = bc.binaryToDecimal(6);
+        LargeInteger a = bc.binaryToDecimal(randoma);
         System.out.println(a);
 //        LargeInteger[] splita = a.split();
 //        System.out.println(a.size);
@@ -38,12 +38,15 @@ public class Main {
 //        System.out.println(a.tail);
 //        System.out.println(splita[0]);
 //        System.out.println(splita[1]);
-        int randomb = (int) (Math.random() * Math.pow(10, 2));
-//        System.out.println(randomb);
-        LargeInteger b = bc.binaryToDecimal(100);
+//        int randomb = (int) (Math.random() * Math.pow(10, 2));
+////        System.out.println(randomb);
+//        LargeInteger b = bc.binaryToDecimal(100);
+//        System.out.println(b);
+//        LargeInteger mul = a.CMmultiply(b);
+//        System.out.println(mul);
+//        System.out.println(bc.binaryToDecimal(mul));
+
+        Bons b = new Bons(a);
         System.out.println(b);
-        LargeInteger mul = a.CMmultiply(b);
-        System.out.println(mul);
-        System.out.println(bc.binaryToDecimal(mul));
     }
 }

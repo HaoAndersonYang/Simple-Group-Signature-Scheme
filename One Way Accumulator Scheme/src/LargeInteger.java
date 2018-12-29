@@ -73,7 +73,7 @@ public class LargeInteger implements Comparable<LargeInteger>, Iterator<Byte> {
         if (tail < 0) {
             tail = value.length - 1;
         }
-        if (size <= 0) {
+        if (size < 0) {
             System.out.println("ERROR: INVALID REMOVE");
             System.exit(-1);
         }
