@@ -1,3 +1,5 @@
+import java.math.BigInteger;
+
 public class Main {
     public static void main(String[] args) {
         //For testing
@@ -26,9 +28,10 @@ public class Main {
 //            member.showIdentity();
 //            System.out.println();
 //        }
+
         BinaryConverter bc = new BinaryConverter();
 //        StringBuilder sb = new StringBuilder();
-        int randoma = (int) (Math.random() * Math.pow(10, 2));
+        int randoma = (int) (Math.random() * Math.pow(10, 3));
 //        System.out.println(randoma);
         LargeInteger a = bc.binaryToDecimal(randoma);
 //        LargeInteger a = new LargeInteger("110");
@@ -46,6 +49,7 @@ public class Main {
         System.out.println("b: " + b);
         LargeInteger mul = a.CMmultiply(b);
         System.out.println("a*b: " + mul);
+        System.out.println("a-b: "+a.subtract(b));
         System.out.println("a+b: "+a.add(b));
         System.out.println();
 //        System.out.println(bc.binaryToDecimal(mul));
@@ -56,8 +60,8 @@ public class Main {
 //        System.out.println(aa);
 //        System.out.println(bb);
 //        System.out.println(mm);
-        LargeInteger mmmmm = aa.BOCM(aa, bb);
-        System.out.println();
-        System.out.println("BONS result: " + mmmmm);
+//        LargeInteger mmmmm = aa.BOCM(aa, bb);
+//        System.out.println();
+//        System.out.println("BONS result: " + mmmmm);
     }
 }
