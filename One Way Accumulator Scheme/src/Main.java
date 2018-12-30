@@ -31,22 +31,33 @@ public class Main {
         int randoma = (int) (Math.random() * Math.pow(10, 2));
 //        System.out.println(randoma);
         LargeInteger a = bc.binaryToDecimal(randoma);
-        System.out.println(a);
+//        LargeInteger a = new LargeInteger("110");
+        System.out.println("a: " + a);
 //        LargeInteger[] splita = a.split();
 //        System.out.println(a.size);
 //        System.out.println(a.head);
 //        System.out.println(a.tail);
 //        System.out.println(splita[0]);
 //        System.out.println(splita[1]);
-//        int randomb = (int) (Math.random() * Math.pow(10, 2));
-////        System.out.println(randomb);
-//        LargeInteger b = bc.binaryToDecimal(100);
-//        System.out.println(b);
-//        LargeInteger mul = a.CMmultiply(b);
-//        System.out.println(mul);
+        int randomb = (int) (Math.random() * Math.pow(10, 2));
+//        System.out.println(randomb);
+        LargeInteger b = bc.binaryToDecimal(randomb);
+//        LargeInteger b = new LargeInteger("11");
+        System.out.println("b: " + b);
+        LargeInteger mul = a.CMmultiply(b);
+        System.out.println("a*b: " + mul);
+        System.out.println("a+b: "+a.add(b));
+        System.out.println();
 //        System.out.println(bc.binaryToDecimal(mul));
-
-        Bons b = new Bons(a);
-        System.out.println(b);
+        Bons aa = new Bons(a);
+        Bons bb = new Bons(b);
+//        Bons mm = new Bons(mul);
+////        Bons b = new Bons(a);
+//        System.out.println(aa);
+//        System.out.println(bb);
+//        System.out.println(mm);
+        LargeInteger mmmmm = aa.BOCM(aa, bb);
+        System.out.println();
+        System.out.println("BONS result: " + mmmmm);
     }
 }

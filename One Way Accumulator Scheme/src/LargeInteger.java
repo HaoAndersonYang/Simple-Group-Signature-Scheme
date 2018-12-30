@@ -67,12 +67,12 @@ public class LargeInteger implements Comparable<LargeInteger>, Iterator<Byte> {
     }
 
     public byte removeLast() {
-        byte res = value[tail - 1];
         tail -= 1;
         size -= 1;
         if (tail < 0) {
             tail = value.length - 1;
         }
+        byte res = value[tail];
         if (size < 0) {
             System.out.println("ERROR: INVALID REMOVE");
             System.exit(-1);
@@ -82,7 +82,7 @@ public class LargeInteger implements Comparable<LargeInteger>, Iterator<Byte> {
 
     private void insertAtHead(byte insert) {
         if (head == 0) {
-            head = value.length;
+            head = value.length; 
         }
         head -= 1;
         value[head] = insert;
@@ -134,13 +134,13 @@ public class LargeInteger implements Comparable<LargeInteger>, Iterator<Byte> {
             result.insertAtLast((byte) 0);
         }
         for (int i = this.size - 1; i >= 0; i--) {
-            System.out.println();
+//            System.out.println();
             int indexi = this.size - i - 1;
-            System.out.println(indexi + " " + this.value[i]);
+//            System.out.println(indexi + " " + this.value[i]);
             byte carry = 0;
             for (int j = multiplier.size - 1; j >= 0; j--) {
                 int indexj = multiplier.size - j - 1;
-                System.out.println(indexj + " " + multiplier.value[j]);
+//                System.out.println(indexj + " " + multiplier.value[j]);
                 byte a = result.value[result.tail - indexi - indexj - 1];
                 byte b = (byte) (multiplier.value[j] & this.value[i]);
 //                byte b = (byte) (multiplier.value[j] * this.value[i]);
@@ -151,7 +151,7 @@ public class LargeInteger implements Comparable<LargeInteger>, Iterator<Byte> {
                 result.value[result.tail - indexi - indexj - 1] = su;
             }
             result.value[result.tail - multiplier.size - indexi - 1] = carry;
-            System.out.println(result);
+//            System.out.println(result);
         }
         return result;
     }
@@ -262,6 +262,7 @@ public class LargeInteger implements Comparable<LargeInteger>, Iterator<Byte> {
             cout = (byte) ((a & b) ^ (cout & (a ^ b)));
             sum.insertAtHead(su);
         }
+        sum.insertAtHead(cout);
         LargeInteger res = new LargeInteger(sum);
         while (res.compareTo(Group.N) > 0) {
             res = res.subtract(Group.N);

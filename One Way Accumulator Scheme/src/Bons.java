@@ -3,7 +3,36 @@ public class Bons {
     public int[][] BO = new int[2][1000]; // Length->Pos
     private int BOsize = 0;
 
+    public LargeInteger[][] lookup_table = new LargeInteger[5][5];
+
     public Bons(LargeInteger input) {
+        lookup_table[0][0] = new LargeInteger("1");//1*1
+        lookup_table[0][1] = new LargeInteger("11");//1*11
+        lookup_table[0][2] = new LargeInteger("111");//1*111
+        lookup_table[0][3] = new LargeInteger("1111");//1*1111
+        lookup_table[0][4] = new LargeInteger("11111");//1*11111
+        lookup_table[1][0] = new LargeInteger("11");//11*1
+        lookup_table[1][1] = new LargeInteger("1001");//11*11
+        lookup_table[1][2] = new LargeInteger("10101");//11*111
+        lookup_table[1][3] = new LargeInteger("101101");//11*1111
+        lookup_table[1][4] = new LargeInteger("1011101");//11*11111
+        lookup_table[2][0] = new LargeInteger("111");//111*1
+        lookup_table[2][1] = new LargeInteger("10101");//111*11
+        lookup_table[2][2] = new LargeInteger("110001");//111*111
+        lookup_table[2][3] = new LargeInteger("1101001");//111*1111
+        lookup_table[2][4] = new LargeInteger("11011001");//111*11111
+        lookup_table[3][0] = new LargeInteger("1111");//1111*1
+        lookup_table[3][1] = new LargeInteger("101101");//1111*11
+        lookup_table[3][2] = new LargeInteger("1101001");//1111*111
+        lookup_table[3][3] = new LargeInteger("11100001");//1111*1111
+        lookup_table[3][4] = new LargeInteger("111010001");//1111*11111
+        lookup_table[4][0] = new LargeInteger("11111");//11111*1
+        lookup_table[4][1] = new LargeInteger("1011101");//11111*11
+        lookup_table[4][2] = new LargeInteger("11011001");//11111*111
+        lookup_table[4][3] = new LargeInteger("111010001");//11111*1111
+        lookup_table[4][4] = new LargeInteger("1111000001");//11111*11111
+
+
         LargeInteger binaryNumber = new LargeInteger(input);
         int last = 0;
         int cur = 0;
@@ -49,6 +78,36 @@ public class Bons {
                 BOsize++;
             }
         }
+    }
+
+    public Bons() {
+        //huh?
+    }
+
+    public LargeInteger LUT(int len1, int len2) {
+        return lookup_table[len1 - 1][len2 - 1];
+    }
+
+    /**
+     * @param A
+     * @param B
+     * @return
+     */
+    public LargeInteger BOCM(Bons A, Bons B) {
+        LargeInteger result = new LargeInteger();
+//        for (int i = 0; i < A.BOsize + B.BOsize + 1; i++) {
+//            result.value[i] = 0;
+//        }
+//        for (int i = 0; i<A.)
+        for (int i = 0; i < A.BOsize; i++) {
+            for (int j = 0; j < B.BOsize; j++) {
+                LargeInteger temp = LUT(A.BO[0][i], B.BO[0][j]).shiftLeftbyn(A.BO[1][i] + B.BO[1][j]);
+                System.out.println(temp);
+                result = result.add(temp);
+                System.out.println(result);
+            }
+        }
+        return result;
     }
 
     @Override
