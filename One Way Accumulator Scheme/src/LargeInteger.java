@@ -122,39 +122,6 @@ public class LargeInteger implements Comparable<LargeInteger> {
         return res;
     }
 
-//    //Not needed.
-//    private void insertAtHead(byte insert) {
-//        if (head == 0) {
-//            head = value.length;
-//        }
-//        head -= 1;
-//        value[head] = insert;
-//        size += 1;
-//        if (size > value.length) {
-//            System.out.println("ERROR: OVERFLOW");
-//            System.exit(-1);
-//        }
-//    }
-
-    //https://en.wikipedia.org/wiki/Modular_exponentiation#Right-to-left_binary_method
-    public LargeInteger modular_pow(LargeInteger exp, LargeInteger mod) {
-        LargeInteger exponent = new LargeInteger(exp);
-        LargeInteger module = new LargeInteger(mod);
-        if (module.size == 1) { //Either mod 1 or mod 0.
-            return new LargeInteger();
-        }
-        LargeInteger base = this.mod(module);
-        LargeInteger result = new LargeInteger("1");
-        while (exponent.compareTo(new LargeInteger()) > 0) {
-            if (exponent.value[exponent.tail - 1] != 0) {
-                result = (result.KAmultiply(base)).mod(module);
-            }
-            exponent = exponent.shiftRight();
-            base = base.square().mod(module);
-        }
-        return result;
-    }
-
     /**
      * Returns a LargeInteger which value equals this>>1
      *
@@ -170,6 +137,172 @@ public class LargeInteger implements Comparable<LargeInteger> {
         result.size -= 1;
         return result;
     }
+
+    public LargeInteger shiftLeftbyn(int n) {
+        LargeInteger result = new LargeInteger(this);
+        while (n > 0) {
+            n--;
+            result.insertAtLast((byte) 0);
+        }
+        return result;
+    }
+
+    public int removeFirst() {
+        int res = value[head];
+        head += 1;
+        size -= 1;
+        if (head >= value.length) {
+            head = 0;
+        }
+        if (size <= 0) {
+            System.out.println("ERROR: INVALID REMOVE");
+            System.exit(-1);
+        }
+        return res;
+    }
+
+    private int peekFirst() {
+        return value[head];
+    }
+
+    /**
+     * Strips the leading zeros in the {@code value} array of this LargeIntegers.
+     */
+    public void stripLeadingZeros() {
+        while (peekFirst() == 0 && this.size > 1) {
+            removeFirst();
+        }
+    }
+
+    public LargeInteger[] split() {
+        LargeInteger[] result = new LargeInteger[2];
+        result[0] = new LargeInteger(this);
+        result[0].tail = tail / 2;
+        result[0].size -= tail - tail / 2;
+        result[1] = new LargeInteger(this);
+        result[1].head = tail / 2;
+        result[1].size = this.size - result[0].size;
+//        System.out.println(result[1].size);
+        return result;
+    }
+
+//    //Not needed.
+//    private void insertAtHead(byte insert) {
+//        if (head == 0) {
+//            head = value.length;
+//        }
+//        head -= 1;
+//        value[head] = insert;
+//        size += 1;
+//        if (size > value.length) {
+//            System.out.println("ERROR: OVERFLOW");
+//            System.exit(-1);
+//        }
+//    }
+
+
+    /**
+     * Returns a LargeInteger whose value is {@code (this+val)}.
+     *
+     * @param val the value to be added to this LargeInteger.
+     * @return {@code this+val}.
+     */
+    public LargeInteger add(LargeInteger val) {
+        return this.add(val, head, tail, val.head, val.tail);
+    }
+
+    /**
+     * Returns a LargeInteger whose value is the sum of binary number represented
+     * by {@code this[a_head..a_tail]} and {@code val[b_head..b_tail]}.
+     *
+     * @param val    the value to be added to this LargeInteger.
+     * @param a_head the starting index of this LargeInteger.
+     * @param a_tail the ending index of this LargeInteger.
+     * @param b_head the starting index of val.
+     * @param b_tail the ending index of val.
+     * @return sum of {@code this[a_head..a_tail]} and {@code val[b_head..b_tail]}.
+     */
+    public LargeInteger add(LargeInteger val, int a_head, int a_tail, int b_head, int b_tail) {
+        int a_size = a_tail - a_head;
+        int b_size = b_tail - b_head;
+        //Swap two LargeInteger if val is longer than this
+        if (a_size < b_size) {
+            return val.add(this, b_head, b_tail, a_head, a_tail);
+        }
+        LargeInteger result = new LargeInteger();
+        //Initiate the result
+        while (result.size < a_size + 1) {
+            result.insertAtLast(0);
+        }
+        int cout = 0;
+        int a, b;
+        for (int i = 0; i < a_size; i++) {
+            a = this.value[a_tail - i - 1];
+            //If we are done with the shorter LargeInteger, we set b to 0.
+            if (i < b_size) {
+                b = val.value[b_tail - i - 1];
+            } else {
+                b = 0;
+            }
+            int s = a ^ b ^ cout;
+            cout = (a & b) ^ (cout & (a ^ b));
+            result.value[result.size - i - 1] = s;
+        }
+        result.value[0] = cout;
+        result.stripLeadingZeros();
+        return result;
+    }
+
+
+    /**
+     * Returns a LargeInteger whose value is {@code (this-val)}.
+     *
+     * @param val the value to be subtracted from this LargeInteger.
+     *            Must be smaller than this LargeInteger
+     * @return {@code this-val}.
+     */
+    public LargeInteger subtract(LargeInteger val) {
+        return this.subtract(val, head, tail, val.head, val.tail);
+    }
+
+    /**
+     * Returns a LargeInteger whose value is the difference between binary number
+     * represented by {@code this[a_head..a_tail]} and {@code val[b_head..b_tail]}.
+     *
+     * @param val    the value to be subtracted from this LargeInteger.
+     *               Must be smaller than this LargeInteger
+     * @param a_head the starting index of this LargeInteger.
+     * @param a_tail the ending index of this LargeInteger.
+     * @param b_head the starting index of val.
+     * @param b_tail the ending index of val.
+     * @return sum of {@code this[a_head..a_tail]} and {@code val[b_head..b_tail]}.
+     */
+    public LargeInteger subtract(LargeInteger val, int a_head, int a_tail, int b_head, int b_tail) {
+        LargeInteger result = new LargeInteger();
+        int a_size = a_tail - a_head;
+        int b_size = b_tail - b_head;
+        while (result.size < a_size + 1) {
+            result.insertAtLast(0);
+        }
+        int bout = 0;
+        int a, b;
+        for (int i = 0; i < a_size; i++) {
+            a = this.value[a_tail - i - 1];
+            //If we are done with the shorter LargeInteger, we set b to 0.
+            if (i < b_size) {
+                b = val.value[b_tail - i - 1];
+            } else {
+                b = 0;
+            }
+            int d = a ^ b ^ bout;
+            //a^1 is equivalent to !a
+            bout = ((a ^ 1) & b) ^ (((a ^ b) ^ 1) & bout);
+            result.value[result.size - i - 1] = d;
+        }
+        result.stripLeadingZeros();
+        return result;
+    }
+
 
     //Multiple-precision classical multiplication
     public LargeInteger CMmultiply(LargeInteger multiplier) {
@@ -212,135 +345,31 @@ public class LargeInteger implements Comparable<LargeInteger> {
         return d1.shiftLeftbyn(this.size - 1).add((d01.subtract(d0).subtract(d1))).shiftLeftbyn((this.size - 1) / 2).add(d0);
     }
 
-    public LargeInteger[] split() {
-        LargeInteger[] result = new LargeInteger[2];
-        result[0] = new LargeInteger(this);
-        result[0].tail = tail / 2;
-        result[0].size -= tail - tail / 2;
-        result[1] = new LargeInteger(this);
-        result[1].head = tail / 2;
-        result[1].size = this.size - result[0].size;
-//        System.out.println(result[1].size);
+
+    //https://en.wikipedia.org/wiki/Modular_exponentiation#Right-to-left_binary_method
+    public LargeInteger modular_pow(LargeInteger exp, LargeInteger mod) {
+        LargeInteger exponent = new LargeInteger(exp);
+        LargeInteger module = new LargeInteger(mod);
+        if (module.size == 1) { //Either mod 1 or mod 0.
+            return new LargeInteger();
+        }
+        LargeInteger base = this.mod(module);
+        LargeInteger result = new LargeInteger("1");
+        while (exponent.compareTo(new LargeInteger()) > 0) {
+            if (exponent.value[exponent.tail - 1] != 0) {
+                result = (result.KAmultiply(base)).mod(module);
+            }
+            exponent = exponent.shiftRight();
+            base = base.square().mod(module);
+        }
         return result;
     }
-
 //    public LargeInteger shiftLeft() {
 //        LargeInteger result = new LargeInteger(this);
 //        result.insertAtLast((byte) 0);
 //        return result;
 //    }
 
-
-    public LargeInteger shiftLeftbyn(int n) {
-        LargeInteger result = new LargeInteger(this);
-        while (n > 0) {
-            n--;
-            result.insertAtLast((byte) 0);
-        }
-        return result;
-    }
-
-    public LargeInteger subtract(LargeInteger toSubtract) {
-        LargeInteger diff = new LargeInteger();
-        LargeInteger l = new LargeInteger(this);
-        LargeInteger s = new LargeInteger(toSubtract);
-//        //ASSUME L>S
-//        while (s.size < l.size) {
-//            s.insertAtHead((byte) 0);
-//        }
-//        byte bout = 0;
-//        while (s.size > 0) {
-//            byte a = l.removeLast();
-//            byte b = s.removeLast();
-//            byte d = (byte) (a ^ b ^ bout);
-//            bout = (byte) ((a & bout) ^ (a & b) ^ (b & bout));
-//            diff.insertAtHead(d);
-//        }
-//        while (diff.peekFirst() == 0) {
-//            diff.removeFirst();
-//        }
-        return new LargeInteger(diff);
-    }
-
-
-    public int removeFirst() {
-        int res = value[head];
-        head += 1;
-        size -= 1;
-        if (head >= value.length) {
-            head = 0;
-        }
-        if (size <= 0) {
-            System.out.println("ERROR: INVALID REMOVE");
-            System.exit(-1);
-        }
-        return res;
-    }
-
-    private int peekFirst() {
-        return value[head];
-    }
-
-    /**
-     * Returns a LargeInteger whose value is {@code (this+val)}.
-     *
-     * @param val the value to be added to this LargeInteger.
-     * @return {@code this+val}.
-     */
-    public LargeInteger add(LargeInteger val) {
-        return this.add(val, head, tail, val.head, val.tail);
-    }
-
-    /**
-     * Returns a LargeInteger whose value is the sum of binary number represented
-     * by {@code this[a_head..a_tail]} and {@code val[b_head..b_tail]}.
-     *
-     * @param val    the value to be added to this LargeInteger.
-     * @param a_head the starting index of this LargeInteger.
-     * @param a_tail the ending index of this LargeInteger.
-     * @param b_head the starting index of val.
-     * @param b_tail the ending index of val.
-     * @return sum of {@code this[a_head..a_tail]} and {@code val[b_head..b_tail]}.
-     */
-    public LargeInteger add(LargeInteger val, int a_head, int a_tail, int b_head, int b_tail) {
-        int a_size = a_tail - a_head;
-        int b_size = b_tail - b_head;
-        //Swap two LargeInteger if val is longer than this
-        if (a_size < b_size) {
-            return val.add(this, b_head, b_tail, a_head, a_tail);
-        }
-        LargeInteger sum = new LargeInteger();
-        //Initiate the sum
-        while (sum.size < a_size + 1) {
-            sum.insertAtLast(0);
-        }
-        int cout = 0;
-        int a, b;
-        for (int i = 0; i < a_size; i++) {
-            a = this.value[a_tail - i - 1];
-            //If we are done with the shorter LargeInteger, we set b to 0.
-            if (i < b_size) {
-                b = val.value[b_tail - i - 1];
-            } else {
-                b = 0;
-            }
-            int s = a ^ b ^ cout;
-            cout = (a & b) ^ (cout & (a ^ b));
-            sum.value[sum.size - i - 1] = s;
-        }
-        sum.value[0] = cout;
-        sum.stripLeadingZeros();
-        return sum;
-    }
-
-    /**
-     * Strips the leading zeros in the {@code value} array of this LargeIntegers.
-     */
-    public void stripLeadingZeros() {
-        while (peekFirst() == 0 && this.size > 1) {
-            removeFirst();
-        }
-    }
 
     public LargeInteger square() {
         return this.KAmultiply(this);

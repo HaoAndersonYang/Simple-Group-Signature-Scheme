@@ -5,11 +5,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/One Way Accumulator Scheme/src/LargeInteger.java" beforeDir="false" afterPath="$PROJECT_DIR$/One Way Accumulator Scheme/src/LargeInteger.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/One Way Accumulator Scheme/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/One Way Accumulator Scheme/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/One Way Accumulator Scheme/Bons.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/One Way Accumulator Scheme/Bons.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/One Way Accumulator Scheme/Group.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/One Way Accumulator Scheme/Group.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/One Way Accumulator Scheme/LargeInteger.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/One Way Accumulator Scheme/LargeInteger.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/One Way Accumulator Scheme/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/One Way Accumulator Scheme/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/One Way Accumulator Scheme/Member.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/One Way Accumulator Scheme/Member.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -35,8 +32,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/One Way Accumulator Scheme/src/LargeInteger.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="319">
-              <caret line="183" column="47" lean-forward="true" selection-start-line="183" selection-start-column="47" selection-end-line="183" selection-end-column="47" />
+            <state relative-caret-position="592">
+              <caret line="326" column="22" lean-forward="true" selection-start-line="326" selection-start-column="22" selection-end-line="326" selection-end-column="22" />
               <folding>
                 <element signature="e#69#88#0" />
                 <element signature="e#204#223#0" />
@@ -53,23 +50,35 @@
                 <element signature="e#3028#3378#0" />
                 <element signature="e#3468#3502#0" />
                 <element signature="e#3468#3818#0" />
+                <element signature="e#3468#3578#0" />
+                <element signature="e#3468#3877#0" />
+                <element signature="e#3469#3687#0" />
+                <element signature="e#3694#4004#0" />
+                <element signature="e#4488#4581#0" />
+                <element signature="e#4488#4714#0" />
+                <element signature="e#4488#4901#0" />
                 <element signature="e#3820#3839#0" />
-                <element signature="e#4253#5050#0" />
-                <element signature="e#4620#4654#0" />
-                <element signature="e#5056#5350#0" />
-                <element signature="e#8755#8756#0" expanded="true" />
-                <element signature="e#8789#8790#0" expanded="true" />
-                <element signature="e#7785#7936#0" />
-                <element signature="e#8066#8243#0" />
-                <element signature="e#8066#9153#0" />
-                <element signature="e#9522#9541#0" />
-                <element signature="e#9522#9674#0" />
+                <element signature="e#5565#7158#0" />
+                <element signature="e#7389#7441#0" />
+                <element signature="e#7516#7659#0" />
+                <element signature="e#6022#6843#0" />
+                <element signature="e#8974#9771#0" />
+                <element signature="e#7264#7303#0" />
                 <element signature="e#9373#9590#0" />
                 <element signature="e#10237#10287#0" />
                 <element signature="e#10237#10995#0" />
                 <element signature="e#12479#12598#0" />
                 <element signature="e#12479#13083#0" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/One Way Accumulator Scheme/src/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="157">
+              <caret line="52" column="45" lean-forward="true" selection-start-line="52" selection-start-column="45" selection-end-line="52" selection-end-column="45" />
             </state>
           </provider>
         </entry>
@@ -160,8 +169,8 @@
         <option value="$PROJECT_DIR$/One Way Accumulator Scheme/src/BinaryConverter.java" />
         <option value="$PROJECT_DIR$/One Way Accumulator Scheme/src/Group.java" />
         <option value="$PROJECT_DIR$/One Way Accumulator Scheme/src/Bons.java" />
-        <option value="$PROJECT_DIR$/One Way Accumulator Scheme/src/Main.java" />
         <option value="$PROJECT_DIR$/One Way Accumulator Scheme/src/LargeInteger.java" />
+        <option value="$PROJECT_DIR$/One Way Accumulator Scheme/src/Main.java" />
       </list>
     </option>
   </component>
@@ -208,7 +217,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546161750907" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546171881682" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
@@ -265,7 +274,7 @@
       <workItem from="1545968242544" duration="772000" />
       <workItem from="1545970002999" duration="2956000" />
       <workItem from="1546005489726" duration="23009000" />
-      <workItem from="1546138708634" duration="15926000" />
+      <workItem from="1546138708634" duration="23125000" />
     </task>
     <task id="LOCAL-00001" summary="Implemented the Binary Converter and the Multiple Precision Classical Multiplication">
       <created>1545660978217</created>
@@ -281,11 +290,18 @@
       <option name="project" value="LOCAL" />
       <updated>1546159480884</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Added a lot of comments.">
+      <created>1546161850091</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1546161850091</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="179994000" />
+    <option name="totallyTimeSpent" value="187193000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
@@ -306,7 +322,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32952183" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
@@ -325,10 +341,37 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Implemented the Binary Converter and the Multiple Precision Classical Multiplication" />
     <MESSAGE value="Fixed the bug in addition&#10;Implemented the strip leading zero method" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed the bug in addition&#10;Implemented the strip leading zero method" />
+    <MESSAGE value="Added a lot of comments." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added a lot of comments." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/One Way Accumulator Scheme/src/BinaryConverter.java">
@@ -339,13 +382,6 @@
             <element signature="e#245#246#0" expanded="true" />
             <element signature="e#305#306#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/One Way Accumulator Scheme/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="551">
-          <caret line="31" selection-start-line="31" selection-end-line="31" />
         </state>
       </provider>
     </entry>
@@ -389,10 +425,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/One Way Accumulator Scheme/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="52" column="45" lean-forward="true" selection-start-line="52" selection-start-column="45" selection-end-line="52" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/One Way Accumulator Scheme/src/LargeInteger.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="183" column="47" lean-forward="true" selection-start-line="183" selection-start-column="47" selection-end-line="183" selection-end-column="47" />
+        <state relative-caret-position="592">
+          <caret line="326" column="22" lean-forward="true" selection-start-line="326" selection-start-column="22" selection-end-line="326" selection-end-column="22" />
           <folding>
             <element signature="e#69#88#0" />
             <element signature="e#204#223#0" />
@@ -409,17 +452,20 @@
             <element signature="e#3028#3378#0" />
             <element signature="e#3468#3502#0" />
             <element signature="e#3468#3818#0" />
+            <element signature="e#3468#3578#0" />
+            <element signature="e#3468#3877#0" />
+            <element signature="e#3469#3687#0" />
+            <element signature="e#3694#4004#0" />
+            <element signature="e#4488#4581#0" />
+            <element signature="e#4488#4714#0" />
+            <element signature="e#4488#4901#0" />
             <element signature="e#3820#3839#0" />
-            <element signature="e#4253#5050#0" />
-            <element signature="e#4620#4654#0" />
-            <element signature="e#5056#5350#0" />
-            <element signature="e#8755#8756#0" expanded="true" />
-            <element signature="e#8789#8790#0" expanded="true" />
-            <element signature="e#7785#7936#0" />
-            <element signature="e#8066#8243#0" />
-            <element signature="e#8066#9153#0" />
-            <element signature="e#9522#9541#0" />
-            <element signature="e#9522#9674#0" />
+            <element signature="e#5565#7158#0" />
+            <element signature="e#7389#7441#0" />
+            <element signature="e#7516#7659#0" />
+            <element signature="e#6022#6843#0" />
+            <element signature="e#8974#9771#0" />
+            <element signature="e#7264#7303#0" />
             <element signature="e#9373#9590#0" />
             <element signature="e#10237#10287#0" />
             <element signature="e#10237#10995#0" />
