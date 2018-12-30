@@ -56,8 +56,8 @@ public class Main {
 //        System.out.println(aa);
 //        System.out.println(bb);
 //        System.out.println(mm);
-        LargeInteger mmmmm = aa.BOCM(aa, bb);
-        System.out.println();
-        System.out.println("BONS result: " + mmmmm);
+//        LargeInteger mmmmm = aa.BOCM(aa, bb);
+//        System.out.println();
+//        System.out.println("BONS result: " + mmmmm);
     }
 }

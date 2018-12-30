@@ -4,13 +4,12 @@ import java.util.Spliterator;
 import java.util.function.Consumer;
 
 // Assume no leading zero
-public class LargeInteger implements Comparable<LargeInteger>, Iterator<Byte> {
+public class LargeInteger implements Comparable<LargeInteger> {
 
-    public Byte[] value = new Byte[1000];
+    public int[] value = new int[1000];//Big endian
     public int head = 0;//value[head] is the head
     public int tail = 0;//value[tail] is place to insert
-    public int size = 0;
-
+    public int size = 0;//Number of bits
 
     public LargeInteger(LargeInteger li) {
         this.value = li.value.clone();
@@ -50,10 +49,10 @@ public class LargeInteger implements Comparable<LargeInteger>, Iterator<Byte> {
 
     //Single bit
     public LargeInteger(int i) {
-        this.insertAtHead((byte) i);
+        this.insertAtLast((byte) i);
     }
 
-    public void insertAtLast(byte insert) {
+    public void insertAtLast(int insert) {
         value[tail] = insert;
         tail += 1;
         size += 1;
@@ -66,13 +65,13 @@ public class LargeInteger implements Comparable<LargeInteger>, Iterator<Byte> {
         }
     }
 
-    public byte removeLast() {
+    public int removeLast() {
         tail -= 1;
         size -= 1;
         if (tail < 0) {
             tail = value.length - 1;
         }
-        byte res = value[tail];
+        int res = value[tail];
         if (size < 0) {
             System.out.println("ERROR: INVALID REMOVE");
             System.exit(-1);
@@ -80,21 +79,22 @@ public class LargeInteger implements Comparable<LargeInteger>, Iterator<Byte> {
         return res;
     }
 
-    private void insertAtHead(byte insert) {
-        if (head == 0) {
-            head = value.length; 
-        }
-        head -= 1;
-        value[head] = insert;
-        size += 1;
-        if (size > value.length) {
-            System.out.println("ERROR: OVERFLOW");
-            System.exit(-1);
-        }
-    }
+//    //Not needed.
+//    private void insertAtHead(byte insert) {
+//        if (head == 0) {
+//            head = value.length;
+//        }
+//        head -= 1;
+//        value[head] = insert;
+//        size += 1;
+//        if (size > value.length) {
+//            System.out.println("ERROR: OVERFLOW");
+//            System.exit(-1);
+//        }
+//    }
 
     public LargeInteger() {
-        this.insertAtHead((byte) 0);
+        this.insertAtLast((byte) 0);
     }
 
     //https://en.wikipedia.org/wiki/Modular_exponentiation#Right-to-left_binary_method
@@ -137,16 +137,16 @@ public class LargeInteger implements Comparable<LargeInteger>, Iterator<Byte> {
 //            System.out.println();
             int indexi = this.size - i - 1;
 //            System.out.println(indexi + " " + this.value[i]);
-            byte carry = 0;
+            int carry = 0;
             for (int j = multiplier.size - 1; j >= 0; j--) {
                 int indexj = multiplier.size - j - 1;
 //                System.out.println(indexj + " " + multiplier.value[j]);
-                byte a = result.value[result.tail - indexi - indexj - 1];
-                byte b = (byte) (multiplier.value[j] & this.value[i]);
+                int a = result.value[result.tail - indexi - indexj - 1];
+                int b = (multiplier.value[j] & this.value[i]);
 //                byte b = (byte) (multiplier.value[j] * this.value[i]);
-                byte su = (byte) (a ^ b ^ carry);
+                int su = (a ^ b ^ carry);
 //                byte su = (byte) ((a + b + carry) % 2);
-                carry = (byte) ((a & b) ^ (carry & (a ^ b)));
+                carry = ((a & b) ^ (carry & (a ^ b)));
 //                carry = (byte) ((a + b + carry) / 2);
                 result.value[result.tail - indexi - indexj - 1] = su;
             }
@@ -206,27 +206,27 @@ public class LargeInteger implements Comparable<LargeInteger>, Iterator<Byte> {
         LargeInteger diff = new LargeInteger();
         LargeInteger l = new LargeInteger(this);
         LargeInteger s = new LargeInteger(toSubtract);
-        //ASSUME L>S
-        while (s.size < l.size) {
-            s.insertAtHead((byte) 0);
-        }
-        byte bout = 0;
-        while (s.size > 0) {
-            byte a = l.removeLast();
-            byte b = s.removeLast();
-            byte d = (byte) (a ^ b ^ bout);
-            bout = (byte) ((a & bout) ^ (a & b) ^ (b & bout));
-            diff.insertAtHead(d);
-        }
-        while (diff.peekFirst() == 0) {
-            diff.removeFirst();
-        }
+//        //ASSUME L>S
+//        while (s.size < l.size) {
+//            s.insertAtHead((byte) 0);
+//        }
+//        byte bout = 0;
+//        while (s.size > 0) {
+//            byte a = l.removeLast();
+//            byte b = s.removeLast();
+//            byte d = (byte) (a ^ b ^ bout);
+//            bout = (byte) ((a & bout) ^ (a & b) ^ (b & bout));
+//            diff.insertAtHead(d);
+//        }
+//        while (diff.peekFirst() == 0) {
+//            diff.removeFirst();
+//        }
         return new LargeInteger(diff);
     }
 
 
-    public byte removeFirst() {
-        byte res = value[head];
+    public int removeFirst() {
+        int res = value[head];
         head += 1;
         size -= 1;
         if (head >= value.length) {
@@ -239,35 +239,47 @@ public class LargeInteger implements Comparable<LargeInteger>, Iterator<Byte> {
         return res;
     }
 
-    private byte peekFirst() {
+    private int peekFirst() {
         return value[head];
     }
 
 
     public LargeInteger add(LargeInteger toAdd) {
-        if (toAdd.size > this.size) {
-            return toAdd.add(this);
+        return this.add(toAdd, head, tail, toAdd.head, toAdd.tail);
+    }
+
+    public LargeInteger add(LargeInteger toAdd, int a_head, int a_tail, int b_head, int b_tail) {
+        int a_size = a_tail - a_head;
+        int b_size = b_tail - b_head;
+        if (a_size < b_size) {
+            return toAdd.add(this, b_head, b_tail, a_head, a_tail);
         }
         LargeInteger sum = new LargeInteger();
-        LargeInteger l = new LargeInteger(this);
-        LargeInteger s = new LargeInteger(toAdd);
-        while (s.size < l.size) {
-            s.insertAtHead((byte) 0);
+        while (sum.size < a_size + 1) {
+            sum.insertAtLast(0);
         }
-        byte cout = 0;
-        while (s.size > 0) {
-            byte a = l.removeLast();
-            byte b = s.removeLast();
-            byte su = (byte) (a ^ b ^ cout);
+        int cout = 0;
+        int a, b;
+        for (int i = 0; i < a_size; i++) {
+            a = this.value[a_tail - i - 1];
+            if (i < b_size) {
+                b = toAdd.value[b_tail - i - 1];
+            } else {
+                b = 0;
+            }
+            int s = a ^ b ^ cout;
             cout = (byte) ((a & b) ^ (cout & (a ^ b)));
-            sum.insertAtHead(su);
+            sum.value[sum.size - i - 1] = s;
         }
-        sum.insertAtHead(cout);
-        LargeInteger res = new LargeInteger(sum);
-        while (res.compareTo(Group.N) > 0) {
-            res = res.subtract(Group.N);
+        sum.value[0] = cout;
+        sum.stripLeadingZeros();
+        return sum;
+    }
+
+    public void stripLeadingZeros() {
+        while (peekFirst() == 0 && this.size > 1) {
+            removeFirst();
         }
-        return res;
     }
 
     public LargeInteger square() {
@@ -299,23 +311,13 @@ public class LargeInteger implements Comparable<LargeInteger>, Iterator<Byte> {
             if (bindex >= value.length) {
                 bindex = 0;
             }
-            byte a = this.value[aindex];
-            byte b = o.value[bindex];
+            int a = this.value[aindex];
+            int b = o.value[bindex];
             if (a != b) {
                 result = a - b;
                 break;
             }
         }
         return result;
-    }
-
-    @Override
-    public boolean hasNext() {
-        return false;
-    }
-
-    @Override
-    public Byte next() {
-        return null;
     }
 }
