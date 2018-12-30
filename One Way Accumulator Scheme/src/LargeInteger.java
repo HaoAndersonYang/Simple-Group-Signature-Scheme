@@ -7,7 +7,7 @@ public class LargeInteger implements Comparable<LargeInteger> {
      * The value is stored in binary representation: all elements in the
      * array must be zeros and ones.
      */
-    public int[] value = new int[1000];//Big endian
+    public int[] value = new int[20000];//Big endian
 
     /**
      * The head of the value array. Integers in the array between {@code head}
@@ -140,9 +140,8 @@ public class LargeInteger implements Comparable<LargeInteger> {
 
     public LargeInteger shiftLeftbyn(int n) {
         LargeInteger result = new LargeInteger(this);
-        while (n > 0) {
-            n--;
-            result.insertAtLast((byte) 0);
+        for (int i = 0; i < n; i++) {
+            result.insertAtLast(0);
         }
         return result;
     }
@@ -305,44 +304,82 @@ public class LargeInteger implements Comparable<LargeInteger> {
 
 
     //Multiple-precision classical multiplication
-    public LargeInteger CMmultiply(LargeInteger multiplier) {
+    public LargeInteger CMmultiply(LargeInteger val) {
+        return this.CMmultiply(val, head, tail, val.head, val.tail);
+    }
+
+    public LargeInteger CMmultiply(LargeInteger val, int a_head, int a_tail, int b_head, int b_tail) {
         LargeInteger result = new LargeInteger();
-        for (int i = 0; i < this.size + multiplier.size; i++) {
+        int a_size = a_tail - a_head;
+        int b_size = b_tail - b_head;
+        for (int i = 0; i < a_size + b_size; i++) {
             result.insertAtLast((byte) 0);
         }
-        for (int i = this.size - 1; i >= 0; i--) {
-            int indexi = this.size - i - 1;
+        for (int i = a_tail - 1; i >= a_head; i--) {
+            int indexi = a_tail - i - 1;
             int carry = 0;
-            for (int j = multiplier.size - 1; j >= 0; j--) {
-                int indexj = multiplier.size - j - 1;
+            for (int j = b_tail - 1; j >= b_head; j--) {
+                int indexj = b_tail - j - 1;
                 int a = result.value[result.tail - indexi - indexj - 1];
-                int b = (multiplier.value[j] & this.value[i]);
+                int b = (val.value[j] & this.value[i]);
                 int su = (a ^ b ^ carry);
                 carry = ((a & b) ^ (carry & (a ^ b)));
                 result.value[result.tail - indexi - indexj - 1] = su;
             }
-            result.value[result.tail - multiplier.size - indexi - 1] = carry;
+            result.value[result.tail - b_size - indexi - 1] = carry;
+        }
+        result.stripLeadingZeros();
+        return result;
+    }
+
+    public LargeInteger naive_multiply(LargeInteger val) {
+        LargeInteger result = new LargeInteger();
+        for (int i = tail - 1; i >= head; i--) {
+            int a = this.value[i];
+            if (a == 0) {
+                continue;
+            }
+            result.add(val.shiftLeftbyn(tail-1-i));
         }
         result.stripLeadingZeros();
         return result;
     }
 
     //Karatsuba Algorithm
-    public LargeInteger KAmultiply(LargeInteger multiplier) {
-        if (this.size <= 1) {
-            return new LargeInteger(this.value[head] & multiplier.value[head]);
+    public LargeInteger KAmultiply(LargeInteger val) {
+        return this.KAmultiply(val, this.head, this.tail, val.head, val.tail);
+    }
+
+    public LargeInteger KAmultiply(LargeInteger val, int a_head, int a_tail, int b_head, int b_tail) {
+//        System.out.println(a_head + " " + a_tail + " " + b_head + " " + b_tail);
+        int a_size = a_tail - a_head;
+        int b_size = b_tail - b_head;
+        if (a_size <= 80 || b_size <= 80) {
+            return this.CMmultiply(val, a_head, a_tail, b_head, b_tail);
         }
-        LargeInteger[] ALR = this.split();
-        LargeInteger[] BLR = multiplier.split();
-        System.out.println(this);
-        System.out.println(ALR[0] + " " + ALR[1]);
-        System.out.println(multiplier);
-        System.out.println(BLR[0] + " " + BLR[1]);
-        System.out.println();
-        LargeInteger d1 = ALR[0].KAmultiply(BLR[0]);
-        LargeInteger d0 = ALR[1].KAmultiply(BLR[1]);
-        LargeInteger d01 = (ALR[0].add(ALR[1])).KAmultiply((BLR[0].add(BLR[1])));
-        return d1.shiftLeftbyn(this.size - 1).add((d01.subtract(d0).subtract(d1))).shiftLeftbyn((this.size - 1) / 2).add(d0);
+        int half = (Math.min(a_size, b_size)) / 2;
+        int a_mid = Math.max(a_tail - half, a_head);
+        int b_mid = Math.max(b_tail - half, a_head);
+//        System.out.println(half);
+        //Multiply upper half
+        LargeInteger d1 = this.KAmultiply(val, a_head, a_mid, b_head, b_mid);
+        //Multiply lower half
+        LargeInteger d0 = this.KAmultiply(val, a_mid, a_tail, b_mid, b_tail);
+        LargeInteger d01 = this.add(this, a_head, a_mid, a_mid, a_tail).
+                KAmultiply(val.add(val, b_head, b_mid, b_mid, b_tail));
+//        System.out.println("d1: " + d1);
+//        System.out.println("d0: " + d0);
+//        System.out.println("d01: " + d01);
+//        LargeInteger d1s2 = d1.shiftLeftbyn(half * 2);
+//        System.out.println("d1s2:" + d1s2);
+//        LargeInteger d01subd0 = d01.subtract(d0);
+//        LargeInteger d01subd0d1 = d01subd0.subtract(d1);
+//        LargeInteger d01subd0d1s2 = d01subd0d1.shiftLeftbyn(half);
+//        System.out.println(d01subd0);
+//        System.out.println(d01subd0d1);
+//        System.out.println(d01subd0d1s2);
+//        return d1s2.add(d01subd0d1s2).add(d0);
+        return (d1.shiftLeftbyn(half * 2)).add(((d01.subtract(d1)).subtract(d0)).shiftLeftbyn(half)).add(d0);
     }
 
 

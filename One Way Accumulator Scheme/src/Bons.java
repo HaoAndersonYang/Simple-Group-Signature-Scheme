@@ -1,6 +1,6 @@
 public class Bons {
     private final int LIMIT_LENGTH = 5;
-    public int[][] BO = new int[2][1000]; // Length->Pos
+    public int[][] BO = new int[2][2000]; // Length->Pos
     private int BOsize = 0;
 
     public LargeInteger[][] lookup_table = new LargeInteger[5][5];
@@ -42,8 +42,8 @@ public class Bons {
         int index = -1;
         boolean update = true;
         while (binaryNumber.size > 0) {
+            length = 0;
             if (update) {
-                length = 0;
                 last = cur;
                 index++;
                 cur = binaryNumber.removeLast();
@@ -102,9 +102,9 @@ public class Bons {
         for (int i = 0; i < A.BOsize; i++) {
             for (int j = 0; j < B.BOsize; j++) {
                 LargeInteger temp = LUT(A.BO[0][i], B.BO[0][j]).shiftLeftbyn(A.BO[1][i] + B.BO[1][j]);
-                System.out.println(temp);
+//                System.out.println(temp);
                 result = result.add(temp);
-                System.out.println(result);
+//                System.out.println(result);
             }
         }
         return result;

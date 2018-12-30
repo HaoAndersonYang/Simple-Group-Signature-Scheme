@@ -1,4 +1,5 @@
 import java.math.BigInteger;
+import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
@@ -31,10 +32,13 @@ public class Main {
 
         BinaryConverter bc = new BinaryConverter();
 //        StringBuilder sb = new StringBuilder();
-        int randoma = (int) (Math.random() * Math.pow(10, 3));
-//        System.out.println(randoma);
-        LargeInteger a = bc.binaryToDecimal(randoma);
-//        LargeInteger a = new LargeInteger("110");
+//        int randoma = (int) (Math.random() * Math.pow(10, 100));
+        BigInteger randoma = new BigInteger(1000, new Random());
+        System.out.println(randoma);
+//        System.out.println(randoma.toString(2));
+//        System.out.println(randoma.shiftLeft(2).toString(2));
+//        LargeInteger a = bc.binaryToDecimal(randoma);
+        LargeInteger a = new LargeInteger(randoma.toString(2));
         System.out.println("a: " + a);
 //        LargeInteger[] splita = a.split();
 //        System.out.println(a.size);
@@ -42,15 +46,30 @@ public class Main {
 //        System.out.println(a.tail);
 //        System.out.println(splita[0]);
 //        System.out.println(splita[1]);
-        int randomb = (int) (Math.random() * Math.pow(10, 2));
-//        System.out.println(randomb);
-        LargeInteger b = bc.binaryToDecimal(randomb);
-//        LargeInteger b = new LargeInteger("11");
+//        int randomb = (int) (Math.random() * Math.pow(10, 100));
+        BigInteger randomb = new BigInteger(1000, new Random());
+        System.out.println(randomb);
+//        LargeInteger b = bc.binaryToDecimal(randomb);
+        LargeInteger b = new LargeInteger(randomb.toString(2));
         System.out.println("b: " + b);
-        LargeInteger mul = a.CMmultiply(b);
-        System.out.println("a*b: " + mul);
-        System.out.println("a-b: "+a.subtract(b));
-        System.out.println("a+b: "+a.add(b));
+
+        long currentTime = System.nanoTime();
+        LargeInteger mul = a.KAmultiply(b);
+        System.out.println(System.nanoTime() - currentTime);
+
+        currentTime = System.nanoTime();
+        LargeInteger m = a.CMmultiply(b);
+        System.out.println(System.nanoTime() - currentTime);
+
+        currentTime = System.nanoTime();
+        BigInteger ma = randoma.multiply(randomb);
+        System.out.println(System.nanoTime() - currentTime);
+
+        BigInteger decmul = new BigInteger(mul.toString(), 2);
+        System.out.println("a*b bin: " + mul);
+        System.out.println("a*b dec: " + decmul.toString());
+        System.out.println("a-b: " + a.subtract(b));
+        System.out.println("a+b: " + a.add(b));
         System.out.println();
 //        System.out.println(bc.binaryToDecimal(mul));
         Bons aa = new Bons(a);
@@ -60,8 +79,15 @@ public class Main {
 //        System.out.println(aa);
 //        System.out.println(bb);
 //        System.out.println(mm);
-//        LargeInteger mmmmm = aa.BOCM(aa, bb);
-//        System.out.println();
-//        System.out.println("BONS result: " + mmmmm);
+        currentTime = System.nanoTime();
+        LargeInteger mmmmm = aa.BOCM(aa, bb);
+        System.out.println(System.nanoTime() - currentTime);
+        System.out.println();
+        System.out.println("BONS result: " + mmmmm);
+
+        currentTime = System.nanoTime();
+        LargeInteger aaaaa = a.naive_multiply(b);
+        System.out.println(System.nanoTime() - currentTime);
+        System.out.println(aaaaa);
     }
 }

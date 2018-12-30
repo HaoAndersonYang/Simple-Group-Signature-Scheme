@@ -3,10 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="a1b5f687-b215-48c0-a1c3-c49f78694e25" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/One Way Accumulator Scheme/src/Bons.java" beforeDir="false" afterPath="$PROJECT_DIR$/One Way Accumulator Scheme/src/Bons.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/One Way Accumulator Scheme/src/LargeInteger.java" beforeDir="false" afterPath="$PROJECT_DIR$/One Way Accumulator Scheme/src/LargeInteger.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/One Way Accumulator Scheme/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/One Way Accumulator Scheme/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/One Way Accumulator Scheme/LargeInteger.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/One Way Accumulator Scheme/LargeInteger.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/One Way Accumulator Scheme/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/One Way Accumulator Scheme/Main.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,68 +28,26 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/One Way Accumulator Scheme/src/LargeInteger.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="592">
-              <caret line="326" column="22" lean-forward="true" selection-start-line="326" selection-start-column="22" selection-end-line="326" selection-end-column="22" />
+            <state relative-caret-position="168">
+              <caret line="341" column="51" selection-start-line="341" selection-start-column="51" selection-end-line="341" selection-end-column="51" />
               <folding>
-                <element signature="e#69#88#0" />
-                <element signature="e#204#223#0" />
-                <element signature="e#658#852#0" />
-                <element signature="e#982#1001#0" />
-                <element signature="e#1092#1111#0" />
-                <element signature="e#1092#1128#0" />
-                <element signature="e#377#547#0" />
-                <element signature="e#1870#1909#0" />
-                <element signature="e#1870#2247#0" />
-                <element signature="e#2667#2702#0" />
-                <element signature="e#2253#2470#0" />
-                <element signature="e#3028#3068#0" />
-                <element signature="e#3028#3378#0" />
-                <element signature="e#3468#3502#0" />
-                <element signature="e#3468#3818#0" />
-                <element signature="e#3468#3578#0" />
-                <element signature="e#3468#3877#0" />
-                <element signature="e#3469#3687#0" />
-                <element signature="e#3694#4004#0" />
-                <element signature="e#4488#4581#0" />
-                <element signature="e#4488#4714#0" />
-                <element signature="e#4488#4901#0" />
-                <element signature="e#3820#3839#0" />
-                <element signature="e#5565#7158#0" />
-                <element signature="e#7389#7441#0" />
-                <element signature="e#7516#7659#0" />
-                <element signature="e#6022#6843#0" />
-                <element signature="e#8974#9771#0" />
-                <element signature="e#7264#7303#0" />
-                <element signature="e#9373#9590#0" />
-                <element signature="e#10237#10287#0" />
-                <element signature="e#10237#10995#0" />
-                <element signature="e#12479#12598#0" />
-                <element signature="e#12479#13083#0" />
+                <element signature="e#9422#9423#0" expanded="true" />
+                <element signature="e#9497#9498#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/One Way Accumulator Scheme/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="157">
-              <caret line="52" column="45" lean-forward="true" selection-start-line="52" selection-start-column="45" selection-end-line="52" selection-end-column="45" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.8.0_192/src.zip!/java/math/BigInteger.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-270">
-              <caret line="133" column="7" lean-forward="true" selection-start-line="133" selection-start-column="7" selection-end-line="133" selection-end-column="7" />
+            <state relative-caret-position="415">
+              <caret line="90" column="32" selection-start-line="90" selection-start-column="32" selection-end-line="90" selection-end-column="32" />
               <folding>
-                <element signature="e#23600#23601#0" expanded="true" />
-                <element signature="e#23649#23650#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -99,11 +56,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/One Way Accumulator Scheme/src/Bons.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="113">
-              <caret line="88" column="5" lean-forward="true" selection-start-line="88" selection-start-column="5" selection-end-line="88" selection-end-column="5" />
+            <state relative-caret-position="38">
+              <caret line="2" column="39" selection-start-line="2" selection-start-column="39" selection-end-line="2" selection-end-column="39" />
               <folding>
-                <element signature="e#1698#1699#0" expanded="true" />
-                <element signature="e#1753#1754#0" expanded="true" />
+                <element signature="e#3342#3343#0" expanded="true" />
+                <element signature="e#3397#3398#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -120,18 +77,7 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>removela</find>
-      <find>large</find>
-      <find>kra</find>
-      <find>mult</find>
-      <find>subtract</find>
-      <find>OVERFLOW</find>
-      <find>next()</find>
-      <find>overflow</find>
-      <find>insertAtLast</find>
-      <find>nex</find>
       <find>reset</find>
-      <find>insert</find>
       <find>size</find>
       <find>next</find>
       <find>mag</find>
@@ -142,7 +88,6 @@
       <find>shiftRightImpl</find>
       <find>shiftright</find>
       <find>insertathead</find>
-      <find>kara</find>
       <find>remove</find>
       <find>print</find>
       <find>r</find>
@@ -150,6 +95,18 @@
       <find>compareTo</find>
       <find>endian</find>
       <find>shiftLeftbyn</find>
+      <find>random</find>
+      <find>toSt</find>
+      <find>karat</find>
+      <find>Kara</find>
+      <find>KARA</find>
+      <find>kara</find>
+      <find>[1000</find>
+      <find>bew</find>
+      <find>1000</find>
+      <find>overflow</find>
+      <find>insert</find>
+      <find>time</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -217,7 +174,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546171881682" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546188095711" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
@@ -275,6 +232,7 @@
       <workItem from="1545970002999" duration="2956000" />
       <workItem from="1546005489726" duration="23009000" />
       <workItem from="1546138708634" duration="23125000" />
+      <workItem from="1546172216292" duration="13740000" />
     </task>
     <task id="LOCAL-00001" summary="Implemented the Binary Converter and the Multiple Precision Classical Multiplication">
       <created>1545660978217</created>
@@ -301,13 +259,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="187193000" />
+    <option name="totallyTimeSpent" value="200933000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.497921" weight="0.2531983" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.497921" visible="true" weight="0.2531983" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -316,7 +274,7 @@
       <window_info id="Favorites" order="6" sideWeight="0.502079" side_tool="true" weight="0.2531983" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32917964" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.43762994" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.43762994" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -366,6 +324,20 @@
         </entry>
       </map>
     </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Implemented the Binary Converter and the Multiple Precision Classical Multiplication" />
@@ -396,6 +368,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_192/src.zip!/java/math/BigInteger.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="1627" column="61" selection-start-line="1627" selection-start-column="61" selection-end-line="1627" selection-end-column="61" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#23600#23601#0" expanded="true" />
+            <element signature="e#23649#23650#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_192/src.zip!/java/lang/System.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-785">
+          <caret line="352" column="41" selection-start-line="352" selection-start-column="37" selection-end-line="352" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/One Way Accumulator Scheme/src/Group.java">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -405,72 +396,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/One Way Accumulator Scheme/src/Bons.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="88" column="5" lean-forward="true" selection-start-line="88" selection-start-column="5" selection-end-line="88" selection-end-column="5" />
+        <state relative-caret-position="38">
+          <caret line="2" column="39" selection-start-line="2" selection-start-column="39" selection-end-line="2" selection-end-column="39" />
           <folding>
-            <element signature="e#1698#1699#0" expanded="true" />
-            <element signature="e#1753#1754#0" expanded="true" />
+            <element signature="e#3342#3343#0" expanded="true" />
+            <element signature="e#3397#3398#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_192/src.zip!/java/math/BigInteger.java">
+    <entry file="file://$PROJECT_DIR$/One Way Accumulator Scheme/src/LargeInteger.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-270">
-          <caret line="133" column="7" lean-forward="true" selection-start-line="133" selection-start-column="7" selection-end-line="133" selection-end-column="7" />
+        <state relative-caret-position="168">
+          <caret line="341" column="51" selection-start-line="341" selection-start-column="51" selection-end-line="341" selection-end-column="51" />
           <folding>
-            <element signature="e#23600#23601#0" expanded="true" />
-            <element signature="e#23649#23650#0" expanded="true" />
+            <element signature="e#9422#9423#0" expanded="true" />
+            <element signature="e#9497#9498#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/One Way Accumulator Scheme/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="52" column="45" lean-forward="true" selection-start-line="52" selection-start-column="45" selection-end-line="52" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/One Way Accumulator Scheme/src/LargeInteger.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="592">
-          <caret line="326" column="22" lean-forward="true" selection-start-line="326" selection-start-column="22" selection-end-line="326" selection-end-column="22" />
+        <state relative-caret-position="415">
+          <caret line="90" column="32" selection-start-line="90" selection-start-column="32" selection-end-line="90" selection-end-column="32" />
           <folding>
-            <element signature="e#69#88#0" />
-            <element signature="e#204#223#0" />
-            <element signature="e#658#852#0" />
-            <element signature="e#982#1001#0" />
-            <element signature="e#1092#1111#0" />
-            <element signature="e#1092#1128#0" />
-            <element signature="e#377#547#0" />
-            <element signature="e#1870#1909#0" />
-            <element signature="e#1870#2247#0" />
-            <element signature="e#2667#2702#0" />
-            <element signature="e#2253#2470#0" />
-            <element signature="e#3028#3068#0" />
-            <element signature="e#3028#3378#0" />
-            <element signature="e#3468#3502#0" />
-            <element signature="e#3468#3818#0" />
-            <element signature="e#3468#3578#0" />
-            <element signature="e#3468#3877#0" />
-            <element signature="e#3469#3687#0" />
-            <element signature="e#3694#4004#0" />
-            <element signature="e#4488#4581#0" />
-            <element signature="e#4488#4714#0" />
-            <element signature="e#4488#4901#0" />
-            <element signature="e#3820#3839#0" />
-            <element signature="e#5565#7158#0" />
-            <element signature="e#7389#7441#0" />
-            <element signature="e#7516#7659#0" />
-            <element signature="e#6022#6843#0" />
-            <element signature="e#8974#9771#0" />
-            <element signature="e#7264#7303#0" />
-            <element signature="e#9373#9590#0" />
-            <element signature="e#10237#10287#0" />
-            <element signature="e#10237#10995#0" />
-            <element signature="e#12479#12598#0" />
-            <element signature="e#12479#13083#0" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
