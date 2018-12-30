@@ -1,3 +1,5 @@
+import java.math.BigInteger;
+
 public class Main {
     public static void main(String[] args) {
         //For testing
@@ -26,6 +28,7 @@ public class Main {
 //            member.showIdentity();
 //            System.out.println();
 //        }
+
         BinaryConverter bc = new BinaryConverter();
 //        StringBuilder sb = new StringBuilder();
         int randoma = (int) (Math.random() * Math.pow(10, 2));

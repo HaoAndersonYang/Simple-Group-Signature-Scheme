@@ -1,70 +1,113 @@
-import java.sql.SQLSyntaxErrorException;
-import java.util.Iterator;
-import java.util.Spliterator;
-import java.util.function.Consumer;
-
-// Assume no leading zero
 public class LargeInteger implements Comparable<LargeInteger> {
 
+    /**
+     * The value of the LargeInteger, in <i>big endian</i> order:
+     * the element of the array at index head is the most significant int
+     * of the value.
+     * The value is stored in binary representation: all elements in the
+     * array must be zeros and ones.
+     */
     public int[] value = new int[1000];//Big endian
-    public int head = 0;//value[head] is the head
-    public int tail = 0;//value[tail] is place to insert
+
+    /**
+     * The head of the value array. Integers in the array between {@code head}
+     * (inclusive) and {@code tail} (exclusive) represents the binary value
+     * of the LargeInteger.
+     * value[head] is the most significant int of the value.
+     */
+    public int head = 0;
+
+    /**
+     * The tail of the value array. Integers in the array between {@code head}
+     * (inclusive) and {@code tail} (exclusive) represents the binary value
+     * of the LargeInteger.
+     * value[tail] is the position for insertion of new bits.
+     */
+    public int tail = 0;
+
+    /**
+     * The number of valid bits of the value array.
+     */
     public int size = 0;//Number of bits
 
-    public LargeInteger(LargeInteger li) {
-        this.value = li.value.clone();
-        this.head = li.head;
-        this.tail = li.tail;
-        this.size = li.size;
+    /**
+     * Basic Constructor.
+     * Creates a LargeInteger with value 0.
+     */
+    public LargeInteger() {
+        this.insertAtLast((byte) 0);
     }
 
-    @Override
-    public String toString() {
-        StringBuilder sb = new StringBuilder();
-        if (tail < head) {
-            for (int i = head; i < value.length; i++) {
-                sb.append(value[i]);
-            }
-            for (int i = 0; i < tail; i++) {
-                sb.append(value[i]);
-            }
-        } else {
-            for (int i = head; i < tail; i++) {
-                sb.append(value[i]);
-            }
-        }
-        return sb.toString();
+    /**
+     * Creates a new LargeInteger which is the copy of the input
+     * LargeInteger
+     *
+     * @param input the input LargeInteger
+     */
+    public LargeInteger(LargeInteger input) {
+        this.value = input.value.clone();
+        this.head = input.head;
+        this.tail = input.tail;
+        this.size = input.size;
     }
 
+    /**
+     * Creates a LargeInteger based on the input string. The string can
+     * only contain '0's and '1's.
+     *
+     * @param input the input string
+     */
     public LargeInteger(String input) {
         for (int i = 0; i < input.length(); i++) {
             if (input.charAt(i) == '1') {
                 this.insertAtLast((byte) 1);
-            }
-            if (input.charAt(i) == '0') {
+            } else if (input.charAt(i) == '0') {
                 this.insertAtLast((byte) 0);
+            } else {
+                System.out.println("ERROR: INVALID INSTANTIATION");
+                System.exit(-1);
             }
         }
+        stripLeadingZeros();
     }
 
-    //Single bit
-    public LargeInteger(int i) {
-        this.insertAtLast((byte) i);
-    }
-
-    public void insertAtLast(int insert) {
-        value[tail] = insert;
-        tail += 1;
-        size += 1;
-        if (tail >= value.length) {
-            tail = 0;
+    /**
+     * Creates the LargeInteger based on the integer inputed.
+     * The integer can only be zero or one.
+     *
+     * @param val the input integer
+     */
+    public LargeInteger(int val) {
+        if (val != 1 && val != 0) {
+            System.out.println("ERROR: INVALID INSTANTIATION");
+            System.exit(-1);
         }
+        this.insertAtLast(val);
+    }
+
+    /**
+     * Inserts the specified int at the tail of the value array
+     *
+     * @param val the specified int
+     */
+    public void insertAtLast(int val) {
+        size += 1;
         if (size > value.length) {
             System.out.println("ERROR: OVERFLOW");
             System.exit(-1);
         }
+        value[tail] = val;
+        tail += 1;
+        if (tail >= value.length) {
+            tail = 0;
+        }
     }
 
+    /**
+     * Retrieves and removes the last element of the value array.
+     *
+     * @return the removed element
+     */
     public int removeLast() {
         tail -= 1;
         size -= 1;
@@ -93,10 +136,6 @@ public class LargeInteger implements Comparable<LargeInteger> {
 //        }
 //    }
 
-    public LargeInteger() {
-        this.insertAtLast((byte) 0);
-    }
-
     //https://en.wikipedia.org/wiki/Modular_exponentiation#Right-to-left_binary_method
     public LargeInteger modular_pow(LargeInteger exp, LargeInteger mod) {
         LargeInteger exponent = new LargeInteger(exp);
@@ -116,6 +155,11 @@ public class LargeInteger implements Comparable<LargeInteger> {
         return result;
     }
 
+    /**
+     * Returns a LargeInteger which value equals this>>1
+     *
+     * @return result LargeInteger
+     */
     public LargeInteger shiftRight() {
         if (this.size == 1) {
             System.out.println("ERROR: Invalid shift");
@@ -134,25 +178,19 @@ public class LargeInteger implements Comparable<LargeInteger> {
             result.insertAtLast((byte) 0);
         }
         for (int i = this.size - 1; i >= 0; i--) {
-//            System.out.println();
             int indexi = this.size - i - 1;
-//            System.out.println(indexi + " " + this.value[i]);
             int carry = 0;
             for (int j = multiplier.size - 1; j >= 0; j--) {
                 int indexj = multiplier.size - j - 1;
-//                System.out.println(indexj + " " + multiplier.value[j]);
                 int a = result.value[result.tail - indexi - indexj - 1];
                 int b = (multiplier.value[j] & this.value[i]);
-//                byte b = (byte) (multiplier.value[j] * this.value[i]);
                 int su = (a ^ b ^ carry);
-//                byte su = (byte) ((a + b + carry) % 2);
                 carry = ((a & b) ^ (carry & (a ^ b)));
-//                carry = (byte) ((a + b + carry) / 2);
                 result.value[result.tail - indexi - indexj - 1] = su;
             }
             result.value[result.tail - multiplier.size - indexi - 1] = carry;
-//            System.out.println(result);
         }
+        result.stripLeadingZeros();
         return result;
     }
 
@@ -243,18 +281,36 @@ public class LargeInteger implements Comparable<LargeInteger> {
         return value[head];
     }
 
-
-    public LargeInteger add(LargeInteger toAdd) {
-        return this.add(toAdd, head, tail, toAdd.head, toAdd.tail);
+    /**
+     * Returns a LargeInteger whose value is {@code (this+val)}.
+     *
+     * @param val the value to be added to this LargeInteger.
+     * @return {@code this+val}.
+     */
+    public LargeInteger add(LargeInteger val) {
+        return this.add(val, head, tail, val.head, val.tail);
     }
 
-    public LargeInteger add(LargeInteger toAdd, int a_head, int a_tail, int b_head, int b_tail) {
+    /**
+     * Returns a LargeInteger whose value is the sum of binary number represented
+     * by {@code this[a_head..a_tail]} and {@code val[b_head..b_tail]}.
+     *
+     * @param val    the value to be added to this LargeInteger.
+     * @param a_head the starting index of this LargeInteger.
+     * @param a_tail the ending index of this LargeInteger.
+     * @param b_head the starting index of val.
+     * @param b_tail the ending index of val.
+     * @return sum of {@code this[a_head..a_tail]} and {@code val[b_head..b_tail]}.
+     */
+    public LargeInteger add(LargeInteger val, int a_head, int a_tail, int b_head, int b_tail) {
         int a_size = a_tail - a_head;
         int b_size = b_tail - b_head;
+        //Swap two LargeInteger if val is longer than this
         if (a_size < b_size) {
-            return toAdd.add(this, b_head, b_tail, a_head, a_tail);
+            return val.add(this, b_head, b_tail, a_head, a_tail);
         }
         LargeInteger sum = new LargeInteger();
+        //Initiate the sum
         while (sum.size < a_size + 1) {
             sum.insertAtLast(0);
         }
@@ -262,13 +318,14 @@ public class LargeInteger implements Comparable<LargeInteger> {
         int a, b;
         for (int i = 0; i < a_size; i++) {
             a = this.value[a_tail - i - 1];
+            //If we are done with the shorter LargeInteger, we set b to 0.
             if (i < b_size) {
-                b = toAdd.value[b_tail - i - 1];
+                b = val.value[b_tail - i - 1];
             } else {
                 b = 0;
             }
             int s = a ^ b ^ cout;
-            cout = (byte) ((a & b) ^ (cout & (a ^ b)));
+            cout = (a & b) ^ (cout & (a ^ b));
             sum.value[sum.size - i - 1] = s;
         }
         sum.value[0] = cout;
@@ -276,6 +333,9 @@ public class LargeInteger implements Comparable<LargeInteger> {
         return sum;
     }
 
+    /**
+     * Strips the leading zeros in the {@code value} array of this LargeIntegers.
+     */
     public void stripLeadingZeros() {
         while (peekFirst() == 0 && this.size > 1) {
             removeFirst();
@@ -287,6 +347,7 @@ public class LargeInteger implements Comparable<LargeInteger> {
     }
 
     public LargeInteger mod(LargeInteger module) {
+        //TODO: REIMPLEMENT
         LargeInteger res = new LargeInteger(this);
         while (res.compareTo(module) > 0) {
             res = res.subtract(module);
@@ -294,11 +355,17 @@ public class LargeInteger implements Comparable<LargeInteger> {
         return res;
     }
 
+    /**
+     * Compare this LargeInteger with the specified LargeInteger.
+     *
+     * @param val LargeInteger to compared with.
+     * @return -1 if this is smaller than val, 1 if this is larger than val and 0 if they are equal.
+     */
     @Override
-    public int compareTo(LargeInteger o) {
-        if (o.size > this.size) {
+    public int compareTo(LargeInteger val) {
+        if (val.size > this.size) {
             return -1;
-        } else if (o.size < this.size) {
+        } else if (val.size < this.size) {
             return 1;
         }
         int result = 0;
@@ -307,12 +374,12 @@ public class LargeInteger implements Comparable<LargeInteger> {
             if (aindex >= value.length) {
                 aindex = 0;
             }
-            int bindex = o.head + i;
+            int bindex = val.head + i;
             if (bindex >= value.length) {
                 bindex = 0;
             }
             int a = this.value[aindex];
-            int b = o.value[bindex];
+            int b = val.value[bindex];
             if (a != b) {
                 result = a - b;
                 break;
@@ -320,4 +387,28 @@ public class LargeInteger implements Comparable<LargeInteger> {
         }
         return result;
     }
+
+    /**
+     * Returns the string which is the binary representation of the value
+     *
+     * @return the string.
+     */
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        if (tail < head) {
+            for (int i = head; i < value.length; i++) {
+                sb.append(value[i]);
+            }
+            for (int i = 0; i < tail; i++) {
+                sb.append(value[i]);
+            }
+        } else {
+            for (int i = head; i < tail; i++) {
+                sb.append(value[i]);
+            }
+        }
+        return sb.toString();
+    }
+
 }
