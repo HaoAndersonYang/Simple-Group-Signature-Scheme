@@ -100,6 +100,7 @@ public class Bons {
 //        }
 //        for (int i = 0; i<A.)
         for (int i = 0; i < A.BOsize; i++) {
+            int carry = 0;
             for (int j = 0; j < B.BOsize; j++) {
                 LargeInteger temp = LUT(A.BO[0][i], B.BO[0][j]).shiftLeftbyn(A.BO[1][i] + B.BO[1][j]);
 //                System.out.println(temp);

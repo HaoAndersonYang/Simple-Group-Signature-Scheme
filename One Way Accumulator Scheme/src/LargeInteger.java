@@ -1,5 +1,7 @@
 public class LargeInteger implements Comparable<LargeInteger> {
 
+    private final int KA_threshold = 5000;
+
     /**
      * The value of the LargeInteger, in <i>big endian</i> order:
      * the element of the array at index head is the most significant int
@@ -7,7 +9,7 @@ public class LargeInteger implements Comparable<LargeInteger> {
      * The value is stored in binary representation: all elements in the
      * array must be zeros and ones.
      */
-    public int[] value = new int[20000];//Big endian
+    public int[] value = new int[100000];//Big endian
 
     /**
      * The head of the value array. Integers in the array between {@code head}
@@ -45,10 +47,10 @@ public class LargeInteger implements Comparable<LargeInteger> {
      * @param input the input LargeInteger
      */
     public LargeInteger(LargeInteger input) {
-        this.value = input.value.clone();
         this.head = input.head;
         this.tail = input.tail;
         this.size = input.size;
+        System.arraycopy(input.value, head, value, 0, size);
     }
 
     /**
@@ -140,9 +142,11 @@ public class LargeInteger implements Comparable<LargeInteger> {
 
     public LargeInteger shiftLeftbyn(int n) {
         LargeInteger result = new LargeInteger(this);
-        for (int i = 0; i < n; i++) {
-            result.insertAtLast(0);
+        for (int i = tail; i < tail + n; i++) {
+            result.value[i] = 0;
         }
+        result.tail += n;
+        result.size += n;
         return result;
     }
 
@@ -339,7 +343,7 @@ public class LargeInteger implements Comparable<LargeInteger> {
             if (a == 0) {
                 continue;
             }
-            result.add(val.shiftLeftbyn(tail-1-i));
+            result.add(val.shiftLeftbyn(tail - 1 - i));
         }
         result.stripLeadingZeros();
         return result;
@@ -354,13 +358,33 @@ public class LargeInteger implements Comparable<LargeInteger> {
 //        System.out.println(a_head + " " + a_tail + " " + b_head + " " + b_tail);
         int a_size = a_tail - a_head;
         int b_size = b_tail - b_head;
-        if (a_size <= 80 || b_size <= 80) {
+        if (a_size <= KA_threshold || b_size <= KA_threshold) {
             return this.CMmultiply(val, a_head, a_tail, b_head, b_tail);
         }
-        int half = (Math.min(a_size, b_size)) / 2;
-        int a_mid = Math.max(a_tail - half, a_head);
-        int b_mid = Math.max(b_tail - half, a_head);
-//        System.out.println(half);
+//        if (a_size == 0 || b_size == 0) {
+//            return new LargeInteger();
+//        }
+//        if (a_size == 1) {
+//            return this.add(val, a_head, a_tail, b_head, b_tail);
+//        }
+//        if (b_size == 1) {
+//            return this.add(val, a_head, a_tail, b_head, b_tail);
+//        }
+        int half;
+        if (a_size > b_size) {
+            half = b_size / 2;
+        } else {
+            half = a_size / 2;
+        }
+        int a_mid = a_tail - half;
+        if (a_mid < a_head) {
+            a_mid = a_head;
+        }
+        int b_mid = b_tail - half;
+        if (b_mid < b_head) {
+            b_mid = b_head;
+        }
+//        System.out.println(a_head + " " + a_mid + " " + a_tail + " " + b_head + " " + b_mid + " " + b_tail);
         //Multiply upper half
         LargeInteger d1 = this.KAmultiply(val, a_head, a_mid, b_head, b_mid);
         //Multiply lower half
