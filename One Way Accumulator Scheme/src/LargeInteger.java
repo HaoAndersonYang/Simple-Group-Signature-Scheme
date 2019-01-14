@@ -409,19 +409,16 @@ public class LargeInteger implements Comparable<LargeInteger> {
 
     //https://en.wikipedia.org/wiki/Modular_exponentiation#Right-to-left_binary_method
     public LargeInteger modular_pow(LargeInteger exp, LargeInteger mod) {
-        LargeInteger exponent = new LargeInteger(exp);
-        LargeInteger module = new LargeInteger(mod);
-        if (module.size == 1) { //Either mod 1 or mod 0.
+        if (mod.size == 1) { //Either mod 1 or mod 0.
             return new LargeInteger();
         }
-        LargeInteger base = this.mod(module);
+        LargeInteger base = this.mod(mod);
         LargeInteger result = new LargeInteger("1");
-        while (exponent.compareTo(new LargeInteger()) > 0) {
-            if (exponent.value[exponent.tail - 1] != 0) {
-                result = (result.KAmultiply(base)).mod(module);
+        for (int i = exp.tail; i >= exp.head; i--) {
+            if (exp.value[i - 1] != 0) {
+                result = (result.KAmultiply(base)).mod(mod);
             }
-            exponent = exponent.shiftRight();
-            base = base.square().mod(module);
+            base = base.square().mod(mod);
         }
         return result;
     }

@@ -26,7 +26,7 @@ public class Main {
 
         currentTime = System.nanoTime();
         LargeInteger m = a.CMmultiply(b);
-        System.out.println("CM MULT:      " + (System.nanoTime() - currentTime));
+        System.out.println("CM MULT:      " + (System.nanoTime() - currentTime));   
 
         currentTime = System.nanoTime();
         m = a.CMmultiply(b, a.head, a.size / 2, b.head, b.size / 2);
