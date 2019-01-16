@@ -1,6 +1,7 @@
 package One_way_accumulator;
 
 import java.math.BigInteger;
+import java.util.Arrays;
 
 public class Member {
     private BigInteger x;
@@ -21,6 +22,11 @@ public class Member {
         System.out.println("z: " + z);
         v = group.getCertificate(y);
         System.out.println(v);
+    }
+
+    public void SkLogLogTest(String message) {
+        Util.SKLOGLOGTuple tuple = Util.SKLOGLOG(message, y, x);
+        System.out.println(tuple.c);
     }
 
 }
