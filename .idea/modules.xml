@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/One Way Accumulator Scheme/One Way Accumulator Scheme.iml" filepath="$PROJECT_DIR$/One Way Accumulator Scheme/One Way Accumulator Scheme.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Simple-Group-Signature-Scheme.iml" filepath="$PROJECT_DIR$/Simple-Group-Signature-Scheme.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Group-Signature-Schemes.iml" filepath="$PROJECT_DIR$/Group-Signature-Schemes.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Group-Signature-Schemes/One Way Accumulator Scheme.iml" filepath="$PROJECT_DIR$/Group-Signature-Schemes/One Way Accumulator Scheme.iml" />
     </modules>
   </component>
 </project>
