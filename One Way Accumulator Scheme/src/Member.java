@@ -1,20 +1,30 @@
+import java.math.BigInteger;
+
 public class Member {
-    private LargeInteger id;
-    private LargeInteger privateAcc;
+    private BigInteger id;
+    private BigInteger privateAcc;
 
     public void showIdentity() {
-        System.out.println(privateAcc.modular_pow(id, Group.N).value);
-        System.out.println(Group.accumulator.value);
+        Group group = Group.getInstance();
+        System.out.println(privateAcc.modPow(id, group.getN()));
+        System.out.println(group.getAccumulator());
     }
 
-    public Member(LargeInteger id, LargeInteger privateAcc) {
+    public Member(BigInteger id, BigInteger privateAcc) {
         this.id = id;
         this.privateAcc = privateAcc;
     }
 
-    public void update(LargeInteger newID) {
-        privateAcc = privateAcc.modular_pow(newID, Group.N);
+    public BigInteger getId() {
+        return id;
     }
 
+    public void update(BigInteger newID) {
+        Group group = Group.getInstance();
+        privateAcc = privateAcc.modPow(newID, group.getN());
+    }
 
+    public void setPrivateAcc(BigInteger privateAcc) {
+        this.privateAcc = privateAcc;
+    }
 }
