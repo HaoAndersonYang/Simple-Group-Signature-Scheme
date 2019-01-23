@@ -12,6 +12,6 @@ public class Main {
         Member amem = new Member(a);
         Member.MessageSignature signature = amem.signMessage("HELLO");
 //        amem.SkLogLogTest("HELLO");
-        Util.SKLOGLOGtest(signature.RootlogResults, signature.message, signature.y.multiply(signature.g).mod(group.n), signature.g);
+        Util.SKROOTLOGtest(signature.RootlogResults, signature.message, signature.y.multiply(signature.g).mod(group.n), signature.g);
     }
 }

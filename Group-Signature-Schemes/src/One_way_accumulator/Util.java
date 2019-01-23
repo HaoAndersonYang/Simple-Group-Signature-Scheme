@@ -57,7 +57,7 @@ public class Util {
             }
         }
         SKLOGLOGTuple result = new SKLOGLOGTuple();
-        System.out.println(c);
+//        System.out.println(c);
         result.c = hash(c.toString());
         result.si = si;
         return result;
@@ -79,7 +79,7 @@ public class Util {
             }
             c.append(converttoBinaryString(ti.toByteArray()));
         }
-        System.out.println(c);
+//        System.out.println(c);
 //        System.out.println(hash(c.toString()));
 //        System.out.println(tuple.c);
         return false;
@@ -125,6 +125,7 @@ public class Util {
             }
         }
         SKROOTLOGTuple result = new SKROOTLOGTuple();
+        System.out.println(c);
         result.c = hash(c.toString());
         result.si = si;
         return result;
@@ -151,8 +152,9 @@ public class Util {
             }
             c.append(converttoBinaryString(ti.toByteArray()));
         }
-        System.out.println(hash(c.toString()));
-        System.out.println(tuple.c);
+        System.out.println(c);
+//        System.out.println(hash(c.toString()));
+//        System.out.println(tuple.c);
         return false;
     }
 
