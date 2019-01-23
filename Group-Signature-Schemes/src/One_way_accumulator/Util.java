@@ -46,8 +46,8 @@ public class Util {
         c.append(y.toString(2));
         c.append(g.toString(2));
         c.append(group.a.toString(2));
-        BigInteger[] si = new BigInteger[group.l];
-        for (int i = 0; i < group.l; i++) {
+        BigInteger[] si = new BigInteger[group.l + 1];
+        for (int i = 1; i <= group.l; i++) {
             BigInteger ri = new BigInteger((int) (group.eps * group.lambda), new Random());
             BigInteger ti = g.modPow(group.a.modPow(ri, group.n), group.n);
             c.append(converttoBinaryString(ti.toByteArray()));
@@ -57,10 +57,34 @@ public class Util {
             }
         }
         SKLOGLOGTuple result = new SKLOGLOGTuple();
+        System.out.println(c);
         result.c = hash(c.toString());
         result.si = si;
         return result;
     }
+
+
+    public static boolean SKLOGLOGtest(SKROOTLOGTuple tuple, String m, BigInteger y, BigInteger g) {
+        StringBuilder c = new StringBuilder(hash(m));
+        Group group = Group.getInstance();
+        c.append(y.toString(2));
+        c.append(g.toString(2));
+        c.append(group.a.toString(2));
+        for (int i = 1; i <= group.l; i++) {
+            BigInteger ti;
+            if (c.charAt(i) == '0') {
+                ti = g.modPow(group.a.modPow(tuple.si[i], group.n), group.n);
+            } else {
+                ti = y.modPow(group.a.modPow(tuple.si[i], group.n), group.n);
+            }
+            c.append(converttoBinaryString(ti.toByteArray()));
+        }
+        System.out.println(c);
+//        System.out.println(hash(c.toString()));
+//        System.out.println(tuple.c);
+        return false;
+    }
+
 
     public static String converttoBinaryString(byte[] input) {
         StringBuilder sb = new StringBuilder();
@@ -71,6 +95,11 @@ public class Util {
                 val <<= 1;
             }
         }
+        int i = 0;
+        while (sb.charAt(i) == '0') {
+            i++;
+        }
+        sb.replace(0, i, "");
         return sb.toString();
     }
 
@@ -85,8 +114,8 @@ public class Util {
         c.append(y.toString(2));
         c.append(g.toString(2));
         c.append(group.e.toString(2));
-        BigInteger[] si = new BigInteger[group.l];
-        for (int i = 0; i < group.l; i++) {
+        BigInteger[] si = new BigInteger[group.l + 1];
+        for (int i = 1; i <= group.l; i++) {
             BigInteger ri = new BigInteger((int) (group.eps * group.lambda), new Random());
             BigInteger ti = g.modPow(group.e.modPow(ri, group.n), group.n);
             c.append(converttoBinaryString(ti.toByteArray()));
@@ -107,10 +136,30 @@ public class Util {
     }
 
 
-    public static byte[] concatenate(byte[] a, byte[] b) {
-        byte[] c = new byte[a.length + b.length];
-        System.arraycopy(a, 0, c, 0, a.length);
-        System.arraycopy(b, 0, c, a.length, b.length);
-        return c;
+    public static boolean SKROOTLOGtest(SKROOTLOGTuple tuple, String m, BigInteger y, BigInteger g) {
+        StringBuilder c = new StringBuilder(hash(m));
+        Group group = Group.getInstance();
+        c.append(y.toString(2));
+        c.append(g.toString(2));
+        c.append(group.e.toString(2));
+        for (int i = 1; i <= group.l; i++) {
+            BigInteger ti;
+            if (c.charAt(i) == '0') {
+                ti = g.modPow(tuple.si[i].modPow(group.e, group.n), group.n);
+            } else {
+                ti = y.modPow(tuple.si[i].modPow(group.e, group.n), group.n);
+            }
+            c.append(converttoBinaryString(ti.toByteArray()));
+        }
+        System.out.println(hash(c.toString()));
+        System.out.println(tuple.c);
+        return false;
     }
+
+//    public static byte[] concatenate(byte[] a, byte[] b) {
+//        byte[] c = new byte[a.length + b.length];
+//        System.arraycopy(a, 0, c, 0, a.length);
+//        System.arraycopy(b, 0, c, a.length, b.length);
+//        return c;
+//    }
 }

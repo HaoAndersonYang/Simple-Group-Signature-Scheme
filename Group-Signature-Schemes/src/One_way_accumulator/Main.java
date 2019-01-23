@@ -10,7 +10,8 @@ public class Main {
 
         BigInteger b = new BigInteger(group.lambda, new Random());
         Member amem = new Member(a);
-        amem.signMessage("HELLO");
+        Member.MessageSignature signature = amem.signMessage("HELLO");
 //        amem.SkLogLogTest("HELLO");
+        Util.SKLOGLOGtest(signature.RootlogResults, signature.message, signature.y.multiply(signature.g).mod(group.n), signature.g);
     }
 }
