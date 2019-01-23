@@ -7,53 +7,49 @@ import java.util.Arrays;
 import java.util.Random;
 
 public class Util {
-    public static BigInteger hash(BigInteger input) {
+    public static String hash(BigInteger input) {
         MessageDigest mDigest = null;
         try {
-            mDigest = MessageDigest.getInstance("SHA1");
+            mDigest = MessageDigest.getInstance("SHA-256");
         } catch (NoSuchAlgorithmException e) {
             e.printStackTrace();
         }
         byte[] result = mDigest.digest(input.toByteArray());
-        BigInteger hashed = new BigInteger(result).abs();
-        return hashed;
+        return converttoBinaryString(result);
     }
 
-    public static BigInteger hash(String input) {
+    public static String hash(String input) {
         MessageDigest mDigest = null;
         try {
-            mDigest = MessageDigest.getInstance("SHA1");
+            mDigest = MessageDigest.getInstance("SHA-256");
         } catch (NoSuchAlgorithmException e) {
             e.printStackTrace();
         }
         byte[] result = mDigest.digest(input.getBytes());
-        BigInteger hashed = new BigInteger(result).abs();
-        return hashed;
+        return converttoBinaryString(result);
     }
 
-    public static BigInteger hash(byte[] input) {
+    public static String hash(byte[] input) {
         MessageDigest mDigest = null;
         try {
-            mDigest = MessageDigest.getInstance("SHA1");
+            mDigest = MessageDigest.getInstance("SHA-256");
         } catch (NoSuchAlgorithmException e) {
             e.printStackTrace();
         }
         byte[] result = mDigest.digest(input);
-        BigInteger hashed = new BigInteger(result).abs();
-        return hashed;
+        return converttoBinaryString(result);
     }
 
-    public static SKLOGLOGTuple SKLOGLOG(String m, BigInteger y, BigInteger x) {
-        BigInteger message = hash(m);
+    public static SKLOGLOGTuple SKLOGLOG(String m, BigInteger y, BigInteger x, BigInteger g) {
+        StringBuilder c = new StringBuilder(hash(m));
         Group group = Group.getInstance();
-        byte[] temp = concatenate(message.toByteArray(), y.toByteArray());
-        temp = concatenate(temp, group.g.toByteArray());
-        temp = concatenate(temp, group.a.toByteArray());
-        StringBuilder c = new StringBuilder(converttoBinaryString(temp));
+        c.append(y.toString(2));
+        c.append(g.toString(2));
+        c.append(group.a.toString(2));
         BigInteger[] si = new BigInteger[group.l];
         for (int i = 0; i < group.l; i++) {
             BigInteger ri = new BigInteger((int) (group.eps * group.lambda), new Random());
-            BigInteger ti = group.g.modPow(group.a.modPow(ri, group.n), group.n);
+            BigInteger ti = g.modPow(group.a.modPow(ri, group.n), group.n);
             c.append(converttoBinaryString(ti.toByteArray()));
             si[i] = ri;
             if (c.charAt(i) != '0') {
@@ -61,7 +57,7 @@ public class Util {
             }
         }
         SKLOGLOGTuple result = new SKLOGLOGTuple();
-        result.c = converttoBinaryString(hash(c.toString()).toByteArray());
+        result.c = hash(c.toString());
         result.si = si;
         return result;
     }
@@ -83,17 +79,16 @@ public class Util {
         BigInteger[] si;
     }
 
-    public static SKROOTLOGTuple SKROOTLOG(String m, BigInteger y, BigInteger x) {
-        BigInteger message = hash(m);
+    public static SKROOTLOGTuple SKROOTLOG(String m, BigInteger y, BigInteger x, BigInteger g) {
+        StringBuilder c = new StringBuilder(hash(m));
         Group group = Group.getInstance();
-        byte[] temp = concatenate(message.toByteArray(), y.toByteArray());
-        temp = concatenate(temp, group.g.toByteArray());
-        temp = concatenate(temp, group.e.toByteArray());
-        StringBuilder c = new StringBuilder(converttoBinaryString(temp));
+        c.append(y.toString(2));
+        c.append(g.toString(2));
+        c.append(group.e.toString(2));
         BigInteger[] si = new BigInteger[group.l];
         for (int i = 0; i < group.l; i++) {
             BigInteger ri = new BigInteger((int) (group.eps * group.lambda), new Random());
-            BigInteger ti = group.g.modPow(group.e.modPow(ri, group.n), group.n);
+            BigInteger ti = g.modPow(group.e.modPow(ri, group.n), group.n);
             c.append(converttoBinaryString(ti.toByteArray()));
             si[i] = ri;
             if (c.charAt(i) != '0') {
@@ -101,7 +96,7 @@ public class Util {
             }
         }
         SKROOTLOGTuple result = new SKROOTLOGTuple();
-        result.c = converttoBinaryString(hash(c.toString()).toByteArray());
+        result.c = hash(c.toString());
         result.si = si;
         return result;
     }

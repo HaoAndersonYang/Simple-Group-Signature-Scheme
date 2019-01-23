@@ -10,6 +10,7 @@ public class Main {
 
         BigInteger b = new BigInteger(group.lambda, new Random());
         Member amem = new Member(a);
-        amem.SkLogLogTest("HELLO");
+        amem.signMessage("HELLO");
+//        amem.SkLogLogTest("HELLO");
     }
 }

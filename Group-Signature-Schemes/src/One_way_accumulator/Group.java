@@ -42,7 +42,6 @@ public class Group {
             g = BigInteger.probablePrime(100, new Random());
         }
         a = BigInteger.probablePrime(100, new Random());
-
     }
 
     public static Group getInstance() {
@@ -69,6 +68,6 @@ public class Group {
     }
 
     public BigInteger getCertificate(BigInteger y) {
-        return (y.add(BigInteger.ONE)).modPow(BigInteger.ONE.divide(e), n);
+        return (y.add(BigInteger.ONE)).modPow(d, n);
     }
 }
