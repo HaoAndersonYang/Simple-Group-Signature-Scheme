@@ -19,8 +19,8 @@ public class Member {
         Group group = Group.getInstance();
         y = group.a.modPow(x, group.n);
         System.out.println("Constant value based on secret key (y): \n" + y);
-        z = group.g.modPow(y, group.n);
-        System.out.println("Membership key (g): \n" + z);
+        z = group.cyclicPow(group.g, y);
+        System.out.println("Membership key (z): \n" + z);
         v = group.getCertificate(y);
         System.out.println("Certificate (v): \n" + v);
     }
@@ -28,8 +28,8 @@ public class Member {
     public MessageSignature signMessage(String message) {
         Group group = Group.getInstance();
         BigInteger r = new BigInteger(group.lambda, new Random());
-        BigInteger ghat = group.g.modPow(r, group.n);
-        BigInteger zhat = ghat.modPow(y, group.n);
+        BigInteger ghat = group.cyclicPow(group.g, r);
+        BigInteger zhat = group.cyclicPow(ghat, y);
         Util.SKLOGLOGTuple LoglogResults = computeSkLogLog(message, zhat, ghat);
         Util.SKROOTLOGTuple RootlogResults = computeSKROOTLog(message, zhat.multiply(ghat).mod(group.n), ghat);
         return new MessageSignature(message, LoglogResults, RootlogResults, ghat, zhat);
@@ -46,8 +46,8 @@ public class Member {
             this.message = message;
             LoglogResults = loglogResults;
             RootlogResults = rootlogResults;
-            this.y = ghat;
-            this.g = zhat;
+            this.y = zhat;
+            this.g = ghat;
         }
 
     }
