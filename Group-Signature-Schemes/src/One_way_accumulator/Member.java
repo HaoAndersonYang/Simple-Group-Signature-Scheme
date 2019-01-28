@@ -18,11 +18,16 @@ public class Member {
         System.out.println("Secret key (x): \n" + x);
         Group group = Group.getInstance();
         y = group.a.modPow(x, group.n);
-        System.out.println("Constant value based on secret key (y): \n" + y);
+        System.out.println("Constant value based on secret key (lly): \n" + y);
         z = group.cyclicPow(group.g, y);
         System.out.println("Membership key (z): \n" + z);
         v = group.getCertificate(y);
         System.out.println("Certificate (v): \n" + v);
+
+        System.out.println("Y+1 " + y.add(BigInteger.ONE));
+        System.out.println("x^e " + x.modPow(group.e, group.n));
+        System.out.println("Y   " + y);
+        System.out.println("a^x " + group.a.modPow(x, group.n));
     }
 
     public MessageSignature signMessage(String message) {
@@ -31,7 +36,7 @@ public class Member {
         BigInteger ghat = group.cyclicPow(group.g, r);
         BigInteger zhat = group.cyclicPow(ghat, y);
         Util.SKLOGLOGTuple LoglogResults = computeSkLogLog(message, zhat, ghat);
-        Util.SKROOTLOGTuple RootlogResults = computeSKROOTLog(message, zhat.multiply(ghat).mod(group.n), ghat);
+        Util.SKROOTLOGTuple RootlogResults = computeSKROOTLog(message, (zhat.multiply(ghat)).mod(group.cyclicbase), ghat);
         return new MessageSignature(message, LoglogResults, RootlogResults, ghat, zhat);
     }
 
@@ -39,15 +44,21 @@ public class Member {
         String message;
         Util.SKLOGLOGTuple LoglogResults;
         Util.SKROOTLOGTuple RootlogResults;
-        BigInteger y;
-        BigInteger g;
+        BigInteger lly;
+        BigInteger llg;
+        BigInteger rly;
+        BigInteger rlg;
+
 
         public MessageSignature(String message, Util.SKLOGLOGTuple loglogResults, Util.SKROOTLOGTuple rootlogResults, BigInteger ghat, BigInteger zhat) {
             this.message = message;
             LoglogResults = loglogResults;
             RootlogResults = rootlogResults;
-            this.y = zhat;
-            this.g = ghat;
+            this.lly = zhat;
+            this.llg = ghat;
+            Group group = Group.getInstance();
+            this.rly = (zhat.multiply(ghat)).mod(group.cyclicbase);
+            rlg = llg;
         }
 
     }

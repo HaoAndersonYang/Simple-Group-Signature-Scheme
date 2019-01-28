@@ -43,9 +43,9 @@ public class Group {
             e = BigInteger.probablePrime(bitlen, new Random());
         }
         d = e.modInverse(lcm);
-//        g = BigInteger.probablePrime(bitlen, new Random());
-//        while (g.compareTo(n) >= 0 || n.remainder(g).equals(BigInteger.ZERO)) {
-//            g = BigInteger.probablePrime(bitlen, new Random());
+//        llg = BigInteger.probablePrime(bitlen, new Random());
+//        while (llg.compareTo(n) >= 0 || n.remainder(llg).equals(BigInteger.ZERO)) {
+//            llg = BigInteger.probablePrime(bitlen, new Random());
 //        }
         //TODO: CHECK THIS
         cyclicK = BigInteger.ONE;
@@ -57,10 +57,10 @@ public class Group {
         g = cyclicPow(p, cyclicK);
         System.out.println("cyclicmod " + cyclicmod);
         System.out.println("cyclicbase " + cyclicbase);
-        System.out.println("g: " + g);
-//        System.out.println(cyclicPow(g,n));
+        System.out.println("llg: " + g);
+//        System.out.println(cyclicPow(llg,n));
 //        while (index.compareTo(n) <= 0) {
-//            System.out.println(cyclicPow(g, n));
+//            System.out.println(cyclicPow(llg, n));
 //            index = index.add(BigInteger.ONE);
 //        }
         a = BigInteger.probablePrime(bitlen, new Random());
