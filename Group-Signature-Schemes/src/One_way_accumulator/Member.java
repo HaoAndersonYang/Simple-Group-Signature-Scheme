@@ -23,11 +23,11 @@ public class Member {
         System.out.println("Membership key (z): \n" + z);
         v = group.getCertificate(y);
         System.out.println("Certificate (v): \n" + v);
-
-        System.out.println("Y+1 " + y.add(BigInteger.ONE));
-        System.out.println("x^e " + x.modPow(group.e, group.n));
-        System.out.println("Y   " + y);
-        System.out.println("a^x " + group.a.modPow(x, group.n));
+//        System.out.println("Y+1 " + y.add(BigInteger.ONE));
+//        System.out.println("x^e " + x.modPow(group.e, group.n));
+//        System.out.println("v^e " + v.modPow(group.e, group.n));
+//        System.out.println("Y   " + y);
+//        System.out.println("a^x " + group.a.modPow(x, group.n));
     }
 
     public MessageSignature signMessage(String message) {
@@ -68,7 +68,7 @@ public class Member {
     }
 
     public Util.SKROOTLOGTuple computeSKROOTLog(String message, BigInteger y, BigInteger g) {
-        return Util.SKROOTLOG(message, y, x, g);
+        return Util.SKROOTLOG(message, y, v, g);
     }
 
 }

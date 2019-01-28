@@ -12,8 +12,10 @@ public class Main {
         Member amem = new Member(a);
         Member.MessageSignature signature = amem.signMessage("HELLO");
 //        amem.SkLogLogTest("HELLO");
-//        System.out.println(Util.SKLOGLOGtest(signature.LoglogResults, signature.message, signature.lly, signature.llg));
-        Util.SKROOTLOGtest(signature.RootlogResults, signature.message, signature.rly, signature.rlg);
-
+        System.out.println();
+        System.out.println(Util.SKLOGLOGtest(signature.LoglogResults, signature.message, signature.lly, signature.llg));
+        System.out.println();
+        System.out.println(Util.SKROOTLOGtest(signature.RootlogResults, signature.message, signature.rly, signature.rlg));
+        System.out.println();
     }
 }

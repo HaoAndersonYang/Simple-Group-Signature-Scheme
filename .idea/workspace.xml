@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a1b5f687-b215-48c0-a1c3-c49f78694e25" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Group-Signature-Schemes/src/One_way_accumulator/Group.java" beforeDir="false" afterPath="$PROJECT_DIR$/Group-Signature-Schemes/src/One_way_accumulator/Group.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Group-Signature-Schemes/src/One_way_accumulator/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Group-Signature-Schemes/src/One_way_accumulator/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Group-Signature-Schemes/src/One_way_accumulator/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/Group-Signature-Schemes/src/One_way_accumulator/Member.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Group-Signature-Schemes/src/One_way_accumulator/Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/Group-Signature-Schemes/src/One_way_accumulator/Util.java" afterDir="false" />
@@ -23,7 +22,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Group-Signature-Schemes/src/One_way_accumulator/Group.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="760">
+            <state relative-caret-position="722">
               <caret line="64" column="11" lean-forward="true" selection-start-line="64" selection-start-column="11" selection-end-line="64" selection-end-column="11" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -32,11 +31,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Group-Signature-Schemes/src/One_way_accumulator/Util.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="47" column="38" selection-start-line="47" selection-start-column="38" selection-end-line="47" selection-end-column="38" />
+            <state relative-caret-position="245">
+              <caret line="88" selection-start-line="88" selection-end-line="88" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#converttoBinaryString#0;class#Util#0" />
@@ -47,11 +46,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Group-Signature-Schemes/src/One_way_accumulator/Member.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="309">
-              <caret line="27" column="54" lean-forward="true" selection-start-line="27" selection-start-column="54" selection-end-line="27" selection-end-column="54" />
+            <state relative-caret-position="117">
+              <caret line="49" column="23" lean-forward="true" selection-start-line="49" selection-start-column="23" selection-end-line="49" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -62,8 +61,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Group-Signature-Schemes/src/One_way_accumulator/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+            <state relative-caret-position="399">
+              <caret line="21" selection-start-line="21" selection-end-line="21" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -138,9 +137,9 @@
         <option value="$PROJECT_DIR$/Group-Signature-Schemes/src/Collision_free_accumulator/Main.java" />
         <option value="$PROJECT_DIR$/Group-Signature-Schemes/src/Collision_free_accumulator/Group.java" />
         <option value="$PROJECT_DIR$/Group-Signature-Schemes/src/One_way_accumulator/Group.java" />
+        <option value="$PROJECT_DIR$/Group-Signature-Schemes/src/One_way_accumulator/Member.java" />
         <option value="$PROJECT_DIR$/Group-Signature-Schemes/src/One_way_accumulator/Main.java" />
         <option value="$PROJECT_DIR$/Group-Signature-Schemes/src/One_way_accumulator/Util.java" />
-        <option value="$PROJECT_DIR$/Group-Signature-Schemes/src/One_way_accumulator/Member.java" />
       </list>
     </option>
   </component>
@@ -193,7 +192,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548668144811" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548671053230" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -270,7 +269,7 @@
       <workItem from="1547936616478" duration="2411000" />
       <workItem from="1547961832071" duration="26658000" />
       <workItem from="1548534212568" duration="21429000" />
-      <workItem from="1548620115845" duration="12684000" />
+      <workItem from="1548620115845" duration="15589000" />
     </task>
     <task id="LOCAL-00001" summary="Implemented the Binary Converter and the Multiple Precision Classical Multiplication">
       <created>1545660978217</created>
@@ -356,11 +355,18 @@
       <option name="project" value="LOCAL" />
       <updated>1548580499772</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Trying to fix the bug in SKROOTLOG&#10;In progress">
+      <created>1548668170046</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1548668170046</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="333488000" />
+    <option name="totallyTimeSpent" value="336393000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
@@ -454,7 +460,8 @@
     <MESSAGE value="Implemented the SKROOTLOG testing.&#10;However, it cannot be used after the string is hashed." />
     <MESSAGE value="Quick update:&#10;The SKLOGLOG testing and SKROOTLOG testing works properly except the hash value for two different string object (?) is different." />
     <MESSAGE value="Fixed bugs in SKLOGLOG." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed bugs in SKLOGLOG." />
+    <MESSAGE value="Trying to fix the bug in SKROOTLOG&#10;In progress" />
+    <option name="LAST_COMMIT_MESSAGE" value="Trying to fix the bug in SKROOTLOG&#10;In progress" />
   </component>
   <component name="editorHistoryManager">
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_192/src.zip!/java/lang/Math.java">
@@ -518,9 +525,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Group-Signature-Schemes/src/One_way_accumulator/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Group-Signature-Schemes/src/One_way_accumulator/Member.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="117">
+          <caret line="49" column="23" lean-forward="true" selection-start-line="49" selection-start-column="23" selection-end-line="49" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Group-Signature-Schemes/src/One_way_accumulator/Group.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="760">
+        <state relative-caret-position="722">
           <caret line="64" column="11" lean-forward="true" selection-start-line="64" selection-start-column="11" selection-end-line="64" selection-end-column="11" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -530,33 +557,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Group-Signature-Schemes/src/One_way_accumulator/Util.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="47" column="38" selection-start-line="47" selection-start-column="38" selection-end-line="47" selection-end-column="38" />
+        <state relative-caret-position="245">
+          <caret line="88" selection-start-line="88" selection-end-line="88" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#converttoBinaryString#0;class#Util#0" />
             <element signature="class#SKLOGLOGTuple#0;class#Util#0" />
             <element signature="class#SKROOTLOGTuple#0;class#Util#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Group-Signature-Schemes/src/One_way_accumulator/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Group-Signature-Schemes/src/One_way_accumulator/Member.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="27" column="54" lean-forward="true" selection-start-line="27" selection-start-column="54" selection-end-line="27" selection-end-column="54" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
