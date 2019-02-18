@@ -7,7 +7,7 @@ public class Member {
     private BigInteger x;
     private BigInteger y;
     private BigInteger z;
-    private BigInteger v;
+    public BigInteger v;
 
     public void showIdentity() {
         Group group = Group.getInstance();
@@ -18,7 +18,7 @@ public class Member {
         System.out.println("Secret key (x): \n" + x);
         Group group = Group.getInstance();
         y = group.a.modPow(x, group.n);
-        System.out.println("Constant value based on secret key (lly): \n" + y);
+        System.out.println("Constant value based on secret key (y): \n" + y);
         z = group.cyclicPow(group.g, y);
         System.out.println("Membership key (z): \n" + z);
         v = group.getCertificate(y);

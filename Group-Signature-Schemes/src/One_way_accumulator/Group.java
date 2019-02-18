@@ -8,9 +8,11 @@ import java.util.Random;
 
 public class Group {
     private static Group group;
+    private BigInteger q;
+    private BigInteger p;
     public BigInteger n;
     public BigInteger e;
-    private BigInteger d;
+    public BigInteger d;
     public BigInteger lcm;
     public BigInteger a;
     public BigInteger g;
@@ -28,20 +30,19 @@ public class Group {
     private ArrayList<Member> members = new ArrayList<>();
 
     private Group() {
-        BigInteger p = BigInteger.probablePrime(bitlen, new Random());
-        BigInteger q = BigInteger.probablePrime(bitlen, new Random());
-        System.out.println("p: " + p);
-        System.out.println("q: " + q);
-        n = p.multiply(q);
-        System.out.println("n: " + n);
-        BigInteger mul = (p.subtract(BigInteger.ONE)).multiply(q.subtract(BigInteger.ONE));
-        BigInteger gcd = (p.subtract(BigInteger.ONE)).gcd(q.subtract(BigInteger.ONE));
-        lcm = mul.divide(gcd);
-        System.out.println("lcm: " + lcm);
-        e = BigInteger.probablePrime(bitlen, new Random());
-        while (e.compareTo(lcm) >= 0 || lcm.remainder(e).equals(BigInteger.ZERO)) {
-            e = BigInteger.probablePrime(bitlen, new Random());
+        while (lcm == null || lcm.mod(new BigInteger("3")).equals(BigInteger.ZERO)) {
+            p = BigInteger.probablePrime(bitlen, new Random());
+            q = BigInteger.probablePrime(bitlen, new Random());
+            System.out.println("p: " + p);
+            System.out.println("q: " + q);
+            n = p.multiply(q);
+            System.out.println("n: " + n);
+            BigInteger mul = (p.subtract(BigInteger.ONE)).multiply(q.subtract(BigInteger.ONE));
+            BigInteger gcd = (p.subtract(BigInteger.ONE)).gcd(q.subtract(BigInteger.ONE));
+            lcm = mul.divide(gcd);
+            System.out.println("lcm: " + lcm);
         }
+        e = new BigInteger("3");
         d = e.modInverse(lcm);
 //        llg = BigInteger.probablePrime(bitlen, new Random());
 //        while (llg.compareTo(n) >= 0 || n.remainder(llg).equals(BigInteger.ZERO)) {
@@ -65,6 +66,9 @@ public class Group {
 //        }
         a = BigInteger.probablePrime(bitlen, new Random());
         System.out.println("a: " + a);
+
+        System.out.println("e: " + e);
+        System.out.println("d: " + d);
     }
 
     public BigInteger cyclicPow(BigInteger base, BigInteger pow) {
