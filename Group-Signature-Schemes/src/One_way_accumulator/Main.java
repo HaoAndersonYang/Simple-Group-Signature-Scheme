@@ -24,11 +24,15 @@ public class Main {
 
         //Time testing:
         long time = System.nanoTime();
-        System.out.println(a.shiftLeft(1));
-        System.out.println(System.nanoTime() - time);
+        a.shiftLeft(1);
+        time = System.nanoTime() - time;
+        System.out.println(time);
+
+        BigInteger two = BigInteger.valueOf(2);
         time = System.nanoTime();
-        System.out.println(a.multiply(BigInteger.ONE.add(BigInteger.ONE)));
-        System.out.println(System.nanoTime() - time);
+        a.multiply(two);
+        time = System.nanoTime() - time;
+        System.out.println(time);
 
     }
 }

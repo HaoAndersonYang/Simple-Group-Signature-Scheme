@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a1b5f687-b215-48c0-a1c3-c49f78694e25" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/One Way Accumulator Scheme/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Group-Signature-Schemes/src/One_way_accumulator/Group.java" beforeDir="false" afterPath="$PROJECT_DIR$/Group-Signature-Schemes/src/One_way_accumulator/Group.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Group-Signature-Schemes/src/One_way_accumulator/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Group-Signature-Schemes/src/One_way_accumulator/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Group-Signature-Schemes/src/One_way_accumulator/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/Group-Signature-Schemes/src/One_way_accumulator/Member.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -34,8 +33,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Group-Signature-Schemes/src/One_way_accumulator/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="7" column="36" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
+            <state relative-caret-position="339">
+              <caret line="32" column="24" selection-start-line="32" selection-start-column="24" selection-end-line="32" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -46,8 +45,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="jar://C:/Program Files/Java/jdk1.8.0_192/src.zip!/java/math/BigInteger.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="3068" column="22" selection-start-line="3068" selection-start-column="22" selection-end-line="3068" selection-end-column="22" />
+            <state relative-caret-position="28386">
+              <caret line="1537" selection-start-line="1537" selection-end-line="1537" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#22896#22897#0" expanded="true" />
@@ -70,6 +69,8 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
+      <find>mag</find>
+      <find>strip</find>
       <find>striplead</find>
       <find>shift</find>
       <find>shiftRight</find>
@@ -77,6 +78,7 @@
       <find>shiftright</find>
       <find>insertathead</find>
       <find>remove</find>
+      <find>print</find>
       <find>r</find>
       <find>add</find>
       <find>compareTo</find>
@@ -96,10 +98,7 @@
       <find>time</find>
       <find>copy</find>
       <find>shiftLeft</find>
-      <find>group.g</find>
-      <find>256</find>
-      <find>hash</find>
-      <find>print</find>
+      <find>prime</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -117,25 +116,19 @@
         <option value="$PROJECT_DIR$/One Way Accumulator Scheme/src/LargeInteger.kt" />
         <option value="$PROJECT_DIR$/One Way Accumulator Scheme/src/util/BinaryConverter.java" />
         <option value="$PROJECT_DIR$/One Way Accumulator Scheme/src/BinaryConverter.java" />
+        <option value="$PROJECT_DIR$/One Way Accumulator Scheme/src/Group.java" />
         <option value="$PROJECT_DIR$/One Way Accumulator Scheme/src/Bons.java" />
         <option value="$PROJECT_DIR$/One Way Accumulator Scheme/src/LargeInteger.java" />
-        <option value="$PROJECT_DIR$/One Way Accumulator Scheme/src/Member.java" />
-        <option value="$PROJECT_DIR$/One Way Accumulator Scheme/src/Group.java" />
         <option value="$PROJECT_DIR$/One Way Accumulator Scheme/src/Main.java" />
-        <option value="$PROJECT_DIR$/One Way Accumulator Scheme/src/One_way_accumulator/Main.java" />
-        <option value="$PROJECT_DIR$/Group-Signature-Schemes/src/Collision_free_accumulator/Main.java" />
-        <option value="$PROJECT_DIR$/Group-Signature-Schemes/src/Collision_free_accumulator/Group.java" />
-        <option value="$PROJECT_DIR$/Group-Signature-Schemes/src/One_way_accumulator/Util.java" />
-        <option value="$PROJECT_DIR$/Group-Signature-Schemes/src/One_way_accumulator/Member.java" />
-        <option value="$PROJECT_DIR$/Group-Signature-Schemes/src/One_way_accumulator/Group.java" />
         <option value="$PROJECT_DIR$/Group-Signature-Schemes/src/One_way_accumulator/Main.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="953" />
-    <option name="width" value="974" />
-    <option name="height" value="1087" />
+    <option name="x" value="88" />
+    <option name="y" value="-10" />
+    <option name="width" value="1400" />
+    <option name="height" value="1000" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -181,13 +174,8 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550521903299" />
-    <property name="jdk.selected.JAVA_MODULE" value="1.8" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550522770809" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RunDashboard">
@@ -210,8 +198,59 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+      <module name="One Way Accumulator Scheme" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
+      <module name="One Way Accumulator Scheme" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -253,16 +292,6 @@
       <workItem from="1546951056360" duration="1906000" />
       <workItem from="1547360568095" duration="1645000" />
       <workItem from="1547401114920" duration="3003000" />
-      <workItem from="1547527501018" duration="1963000" />
-      <workItem from="1547611293460" duration="15339000" />
-      <workItem from="1547936616478" duration="2411000" />
-      <workItem from="1547961832071" duration="26658000" />
-      <workItem from="1548534212568" duration="21429000" />
-      <workItem from="1548620115845" duration="15616000" />
-      <workItem from="1548954686056" duration="600000" />
-      <workItem from="1549373258606" duration="599000" />
-      <workItem from="1549829819507" duration="14145000" />
-      <workItem from="1550519614948" duration="1031000" />
     </task>
     <task id="LOCAL-00001" summary="Implemented the Binary Converter and the Multiple Precision Classical Multiplication">
       <created>1545660978217</created>
@@ -299,74 +328,11 @@
       <option name="project" value="LOCAL" />
       <updated>1546223967254</updated>
     </task>
-    <task id="LOCAL-00006" summary="Switched to BigInteger for demo.">
-      <created>1547631291888</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1547631291889</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Implemented the SKLOGLOG and SKROOTLOG">
-      <created>1547638888462</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1547638888462</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Fixed some bugs">
-      <created>1547639993090</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1547639993090</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Made modification to the Member class and the Util class.&#10;&#10;Now the hash function correctly generates the hased binary string.&#10;&#10;The member class can now sign message.">
-      <created>1548233200397</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1548233200397</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Implemented the SKROOTLOG testing.&#10;However, it cannot be used after the string is hashed.">
-      <created>1548234555259</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1548234555259</updated>
-    </task>
-    <task id="LOCAL-00011" summary="Quick update:&#10;The SKLOGLOG testing and SKROOTLOG testing works properly except the hash value for two different string object (?) is different.">
-      <created>1548234653108</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1548234653108</updated>
-    </task>
-    <task id="LOCAL-00012" summary="Fixed bugs in SKLOGLOG.">
-      <created>1548580499772</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1548580499772</updated>
-    </task>
-    <task id="LOCAL-00013" summary="Trying to fix the bug in SKROOTLOG&#10;In progress">
-      <created>1548668170046</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1548668170046</updated>
-    </task>
-    <task id="LOCAL-00014" summary="Fixed the bug in SKROOTLOG">
-      <created>1548671067448</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1548671067448</updated>
-    </task>
-    <option name="localTasksCounter" value="15" />
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="352795000" />
+    <option name="totallyTimeSpent" value="253768000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
@@ -380,9 +346,9 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" sideWeight="0.502079" side_tool="true" weight="0.2531983" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32848233" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49946696" visible="true" weight="0.43659043" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3991684" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32917964" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.43762994" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -390,7 +356,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32952183" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50053304" side_tool="true" weight="0.43659043" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.32848233" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -452,19 +418,20 @@
     <MESSAGE value="Added a lot of comments." />
     <MESSAGE value="Fixed bugs in KA multiply and CM multiply.&#10;&#10;Implemented naive multiply method for comparison.&#10;&#10;For some reason KA multiply is MUCH slower than CM multiply. I will investigate this." />
     <MESSAGE value="Found the threshold of the KA algorithm in my implementation." />
-    <MESSAGE value="Switched to BigInteger for demo." />
-    <MESSAGE value="Implemented the SKLOGLOG and SKROOTLOG" />
-    <MESSAGE value="Fixed some bugs" />
-    <MESSAGE value="Made modification to the Member class and the Util class.&#10;&#10;Now the hash function correctly generates the hased binary string.&#10;&#10;The member class can now sign message." />
-    <MESSAGE value="Implemented the SKROOTLOG testing.&#10;However, it cannot be used after hashing." />
-    <MESSAGE value="Implemented the SKROOTLOG testing.&#10;However, it cannot be used after the string is hashed." />
-    <MESSAGE value="Quick update:&#10;The SKLOGLOG testing and SKROOTLOG testing works properly except the hash value for two different string object (?) is different." />
-    <MESSAGE value="Fixed bugs in SKLOGLOG." />
-    <MESSAGE value="Trying to fix the bug in SKROOTLOG&#10;In progress" />
-    <MESSAGE value="Fixed the bug in SKROOTLOG" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed the bug in SKROOTLOG" />
+    <option name="LAST_COMMIT_MESSAGE" value="Found the threshold of the KA algorithm in my implementation." />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/One Way Accumulator Scheme/src/BinaryConverter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="30" selection-start-column="30" selection-end-column="30" />
+          <folding>
+            <element signature="e#245#246#0" expanded="true" />
+            <element signature="e#305#306#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_192/src.zip!/java/lang/Math.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="307">
@@ -476,61 +443,60 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_192/src.zip!/java/lang/System.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-785">
-          <caret line="352" column="41" selection-start-line="352" selection-start-column="37" selection-end-line="352" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Temp/7zEC0FC473F/updater-script" />
     <entry file="file://$USER_HOME$/AppData/Local/Temp/7zEC0FE970F/updater-script" />
-    <entry file="file://$PROJECT_DIR$/One Way Accumulator Scheme/src/Bons.java" />
-    <entry file="file://$PROJECT_DIR$/One Way Accumulator Scheme/src/LargeInteger.java" />
-    <entry file="file://$PROJECT_DIR$/One Way Accumulator Scheme/src/BinaryConverter.java" />
-    <entry file="file://$PROJECT_DIR$/Group-Signature-Schemes/src/Collision_free_accumulator/Main.java" />
-    <entry file="file://$PROJECT_DIR$/Group-Signature-Schemes/src/Collision_free_accumulator/Member.java" />
-    <entry file="file://$PROJECT_DIR$/Group-Signature-Schemes/src/Collision_free_accumulator/Group.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_192/src.zip!/java/security/MessageDigest.java">
+    <entry file="file://$PROJECT_DIR$/One Way Accumulator Scheme/src/Group.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="469" column="43" selection-start-line="469" selection-start-column="40" selection-end-line="469" selection-end-column="43" />
+        <state>
+          <caret column="11" selection-start-column="11" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_192/src.zip!/java/lang/StringBuilder.java">
+    <entry file="file://$PROJECT_DIR$/One Way Accumulator Scheme/src/Bons.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="261" column="19" lean-forward="true" selection-start-line="261" selection-start-column="14" selection-end-line="261" selection-end-column="21" />
+        <state relative-caret-position="1425">
+          <caret line="75" selection-start-line="75" selection-end-line="75" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_192/src.zip!/java/lang/AbstractStringBuilder.java">
+    <entry file="file://$PROJECT_DIR$/One Way Accumulator Scheme/src/LargeInteger.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="848" column="33" selection-start-line="848" selection-start-column="33" selection-end-line="848" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Group-Signature-Schemes/src/One_way_accumulator/Util.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="121" selection-start-line="121" selection-end-line="129" selection-end-column="9" />
+        <state relative-caret-position="1121">
+          <caret line="61" column="11" selection-start-line="61" selection-start-column="11" selection-end-line="61" selection-end-column="11" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#converttoBinaryString#0;class#Util#0" />
-            <element signature="class#SKLOGLOGTuple#0;class#Util#0" />
-            <element signature="class#SKROOTLOGTuple#0;class#Util#0" />
+            <element signature="e#14247#14248#0" expanded="true" />
+            <element signature="e#14291#14292#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Group-Signature-Schemes/src/One_way_accumulator/Member.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_192/src.zip!/java/lang/System.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="16" column="19" lean-forward="true" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
+        <state relative-caret-position="171">
+          <caret line="398" column="30" selection-start-line="398" selection-start-column="30" selection-end-line="398" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/One Way Accumulator Scheme/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_192/src.zip!/java/math/BigInteger.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="28386">
+          <caret line="1537" selection-start-line="1537" selection-end-line="1537" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#22896#22897#0" expanded="true" />
+            <element signature="e#22925#22926#0" expanded="true" />
+            <element signature="e#23600#23601#0" expanded="true" />
+            <element signature="e#23649#23650#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -545,24 +511,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_192/src.zip!/java/math/BigInteger.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="3068" column="22" selection-start-line="3068" selection-start-column="22" selection-end-line="3068" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#22896#22897#0" expanded="true" />
-            <element signature="e#22925#22926#0" expanded="true" />
-            <element signature="e#23600#23601#0" expanded="true" />
-            <element signature="e#23649#23650#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Group-Signature-Schemes/src/One_way_accumulator/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="36" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
+        <state relative-caret-position="339">
+          <caret line="32" column="24" selection-start-line="32" selection-start-column="24" selection-end-line="32" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -572,89 +524,7 @@
   </component>
   <component name="masterDetails">
     <states>
-      <state key="ArtifactsStructureConfigurable.UI">
-        <settings>
-          <artifact-editor />
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="FacetStructureConfigurable.UI">
-        <settings>
-          <last-edited>No facets are configured</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="GlobalLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="JdkListConfigurable.UI">
-        <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ModuleStructureConfigurable.UI">
-        <settings>
-          <last-edited>Group-Signature-Schemes</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.39655173" />
-                <option value="0.6" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
       <state key="ProjectJDKs.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ScopeChooserConfigurable.UI">
         <settings>
           <splitter-proportions>
             <option name="proportions">
