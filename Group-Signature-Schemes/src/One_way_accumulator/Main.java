@@ -5,34 +5,22 @@ import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
-        Group group = Group.getInstance();
-        BigInteger a = new BigInteger(group.lambda, new Random());
-
-        BigInteger b = new BigInteger(group.lambda, new Random());
-
-////        GROUP FUNCTION TEST
-//        Member amem = new Member(BigInteger.ONE);
-//        Member bmem = new Member(BigInteger.ZERO);
-//        Member.MessageSignature signature = amem.signMessage("HELLO");
-////        amem.SkLogLogTest("HELLO");
-//        System.out.println();
-//        System.out.println(Util.SKLOGLOGtest(signature.LoglogResults, signature.message, signature.lly, signature.llg));
-//        System.out.println();
-//        System.out.println(Util.SKROOTLOGtest(signature.RootlogResults, signature.message, signature.rly, signature.rlg));
-//        System.out.println();
-
-
-        //Time testing:
-        long time = System.nanoTime();
-        a.shiftLeft(1);
-        time = System.nanoTime() - time;
-        System.out.println(time);
-
-        BigInteger two = BigInteger.valueOf(2);
-        time = System.nanoTime();
-        a.multiply(two);
-        time = System.nanoTime() - time;
-        System.out.println(time);
-
+        LargeInteger a = new LargeInteger(200000);
+        LargeInteger b = new LargeInteger(20);
+        long t = System.nanoTime();
+        LargeInteger c = a.add(b);
+        long newt = System.nanoTime();
+        System.out.println(newt - t);
+        BigInteger x = new BigInteger("200000");
+        BigInteger y = new BigInteger("20");
+        t = System.nanoTime();
+        x.add(y);
+        newt = System.nanoTime();
+        System.out.println(newt - t);
+        System.out.println("a[0]: " + a.mag[0]);
+        System.out.println("a[1]: " + a.mag[1]);
+        System.out.println("c[0]: " + c.mag[0]);
+        System.out.println("c[1]: " + c.mag[1]);
+        System.out.println("c[2]: " + c.mag[2]);
     }
 }
