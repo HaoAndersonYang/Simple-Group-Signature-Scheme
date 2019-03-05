@@ -65,31 +65,28 @@ public class LargeInteger {
 
     //Naive Multiplication
     public LargeInteger naive_multiply(LargeInteger val) {
-        //If the size of val is larger than this large integer, swap them
-        if (val.size > this.size) {
-            return val.add(this);
+        //If the size of val is smaller than this large integer, swap them
+        if (val.size < this.size) {
+            return val.naive_multiply(this);
         }
         int[] resultMag = new int[200];
         int result_size = this.size + val.size + 1;
         int cout = 0;
-        for (int i = 0; i < result_size; i++) {
-            int a = 0;
-            int b = 0;
-            if (i < val.size) {
-                int val_index = val.size - i - 1;
-                b = val.mag[val_index];
-            }
-            if (i < this.size) {
+        for (int i = 0; i < this.size; i++) {
+            for (int j = 0; j < val.size; j++) {
+                int val_index = val.size - j - 1;
+                int b = val.mag[val_index];
                 int this_index = this.size - i - 1;
-                a = this.mag[this_index];
+                int a = this.mag[this_index];
+                int res_index = i + j;
+                long temp = 0;
+                System.out.println(a+" "+b+" "+cout);
+                temp += a * b;
+                temp += cout;
+                temp += resultMag[res_index];
+                cout = (int) (temp >> 16);
+                resultMag[res_index] = (int) (temp & 0xffff);
             }
-            int res_index = result_size - i - 1;
-            long temp = 0;
-            temp += a;
-            temp += b;
-            temp += cout;
-            cout = (int) (temp >> 16);
-            resultMag[res_index] = (int) (temp & 0xffff);
         }
         return new LargeInteger(resultMag, result_size);
     }

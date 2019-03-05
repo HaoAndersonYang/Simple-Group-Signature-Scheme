@@ -5,10 +5,10 @@ import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
-        LargeInteger a = new LargeInteger(200000);
-        LargeInteger b = new LargeInteger(20);
+        LargeInteger a = new LargeInteger(237246);
+        LargeInteger b = new LargeInteger(2);
         long t = System.nanoTime();
-        LargeInteger c = a.add(b);
+        LargeInteger c = a.naive_multiply(b);
         long newt = System.nanoTime();
         System.out.println(newt - t);
         BigInteger x = new BigInteger("200000");
