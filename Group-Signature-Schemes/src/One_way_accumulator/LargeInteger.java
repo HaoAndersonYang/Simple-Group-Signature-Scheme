@@ -71,22 +71,26 @@ public class LargeInteger {
         }
         int[] resultMag = new int[200];
         int result_size = this.size + val.size + 1;
-        int cout = 0;
         for (int i = 0; i < this.size; i++) {
+            int cout = 0;
             for (int j = 0; j < val.size; j++) {
                 int val_index = val.size - j - 1;
                 int b = val.mag[val_index];
                 int this_index = this.size - i - 1;
                 int a = this.mag[this_index];
-                int res_index = i + j;
+                int res_index = result_size - i - j - 1;
                 long temp = 0;
-                System.out.println(a+" "+b+" "+cout);
+//                System.out.println(a + " " + b + " " + cout);
+//                System.out.println(this_index + " " + val_index + " " + res_index);
                 temp += a * b;
                 temp += cout;
                 temp += resultMag[res_index];
                 cout = (int) (temp >> 16);
                 resultMag[res_index] = (int) (temp & 0xffff);
             }
+
+            //This should not cause overflow since we are computing from lowest significant bit.
+            resultMag[result_size - i - val.size - 1] += cout;
         }
         return new LargeInteger(resultMag, result_size);
     }
