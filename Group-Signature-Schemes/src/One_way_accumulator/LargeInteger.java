@@ -3,18 +3,21 @@ package One_way_accumulator;
 public class LargeInteger {
 
 
-    public int[] mag;
+    public long[] mag;
     public int size;
     public final int default_arr_size = 200;
     public final int KA_threshold = 5;
+    public final int bits = 28;
+    public final long subtract_cout = 2 ^ bits;
+    public final long strip = 0xfffffff;
 
     public LargeInteger() {
-        mag = new int[default_arr_size];
+        mag = new long[default_arr_size];
         mag[0] = 0;
         size = 1;
     }
 
-    public LargeInteger(int[] mag, int size) {
+    public LargeInteger(long[] mag, int size) {
         this.mag = mag;
         this.size = size;
         removeLeadingZeros();
@@ -22,11 +25,12 @@ public class LargeInteger {
 
     //Accepts hex string
     public LargeInteger(String val) {
-        mag = new int[default_arr_size];
-        int size = val.length() / 4 + 1;
+        mag = new long[default_arr_size];
+        int len = bits / 4;
+        int size = val.length() / len + 1;
         for (int i = size; i >= 1; i--) {
-            int stringpos = val.length() - i * 4;
-            String substring = val.substring(Math.max(0, stringpos), stringpos + 4);
+            int stringpos = val.length() - i * len;
+            String substring = val.substring(Math.max(0, stringpos), stringpos + len);
             if (substring.equals("")) {
                 mag[size - i] = 0;
             } else {
@@ -42,9 +46,10 @@ public class LargeInteger {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
+        int len = bits / 4;
         for (int i = 0; i < size; i++) {
-            StringBuilder val = new StringBuilder(Integer.toHexString(mag[i]));
-            while (val.length() < 4) {
+            StringBuilder val = new StringBuilder(Long.toHexString(mag[i]));
+            while (val.length() < len) {
                 val.insert(0, "0");
             }
             sb.append(val);
@@ -54,9 +59,9 @@ public class LargeInteger {
     }
 
     public LargeInteger(int val) {
-        int lo = val & 0xffff;
-        int hi = val >> 16;
-        mag = new int[default_arr_size];
+        long lo = val & strip;
+        long hi = val >> bits;
+        mag = new long[default_arr_size];
         if (hi == 0) {
             mag[0] = lo;
             size = 1;
@@ -72,12 +77,12 @@ public class LargeInteger {
         if (val.size > this.size) {
             return val.add(this);
         }
-        int[] resultMag = new int[default_arr_size];
+        long[] resultMag = new long[default_arr_size];
         int result_size = this.size + 1;
-        int cout = 0;
+        long cout = 0;
         for (int i = 0; i < result_size; i++) {
-            int a = 0;
-            int b = 0;
+            long a = 0;
+            long b = 0;
             if (i < val.size) {
                 int val_index = val.size - i - 1;
                 b = val.mag[val_index];
@@ -91,8 +96,8 @@ public class LargeInteger {
             temp += a;
             temp += b;
             temp += cout;
-            cout = (int) (temp >> 16);
-            resultMag[res_index] = (int) (temp & 0xffff);
+            cout = temp >> bits;
+            resultMag[res_index] = temp & strip;
         }
         return new LargeInteger(resultMag, result_size);
     }
@@ -100,12 +105,12 @@ public class LargeInteger {
     //The input is always going to be smaller than this value in the scheme
     public LargeInteger subtract(LargeInteger val) {
         //If the size of val is larger than this large integer, swap them
-        int[] resultMag = new int[default_arr_size];
+        long[] resultMag = new long[default_arr_size];
         int result_size = this.size + 1;
-        int cout = 0;
+        long cout = 0;
         for (int i = 0; i < result_size; i++) {
-            int a = 0;
-            int b = 0;
+            long a = 0;
+            long b = 0;
             if (i < val.size) {
                 int val_index = val.size - i - 1;
                 b = val.mag[val_index];
@@ -121,11 +126,11 @@ public class LargeInteger {
             temp += cout;
             cout = 0;
             while (temp < 0) {
-                temp += 65536;
+                temp += subtract_cout;
                 cout -= 1;
             }
 
-            resultMag[res_index] = (int) (temp & 0xffff);
+            resultMag[res_index] = (int) (temp & strip);
         }
         return new LargeInteger(resultMag, result_size);
     }
@@ -136,7 +141,7 @@ public class LargeInteger {
 //        if (val.size < this.size) {
 //            return val.naive_multiply(this);
 //        }
-        int[] resultMag = new int[default_arr_size];
+        long[] resultMag = new long[default_arr_size];
         int result_size = this.size + val.size + 1;
         for (int i = 0; i < this.size; i++) {
             int this_index = this.size - i - 1;
@@ -150,8 +155,8 @@ public class LargeInteger {
                 temp += a * b;
                 temp += cout;
                 temp += resultMag[res_index];
-                cout = temp >> 16;
-                resultMag[res_index] = (int) (temp & 0xffff);
+                cout = temp >> bits;
+                resultMag[res_index] = temp & strip;
             }
             //This should not cause out of bound since we are computing from lowest significant bit.
             resultMag[result_size - i - val.size - 1] += cout;
@@ -193,9 +198,9 @@ public class LargeInteger {
     }
 
     //Remove the leading zeros from input array
-    public int[] removeLeadingZeros(int[] mag) {
+    public long[] removeLeadingZeros(long[] mag) {
         int keep, pos = 0;
-        int[] res = new int[default_arr_size];
+        long[] res = new long[default_arr_size];
         for (keep = 0; keep < mag.length && mag[keep] == 0; keep++)
             ;
         for (; keep < mag.length && mag[keep] != 0; keep++) {
@@ -221,8 +226,8 @@ public class LargeInteger {
         }
     }
 
-    public int[] arrayCopy(int[] mag, int start, int end) {
-        int[] res = new int[default_arr_size];
+    public long[] arrayCopy(long[] mag, int start, int end) {
+        long[] res = new long[default_arr_size];
         int pos = 0;
         for (int i = start; i < end; i++) {
             res[pos] = mag[i];

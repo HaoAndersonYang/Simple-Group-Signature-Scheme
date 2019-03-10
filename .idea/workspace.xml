@@ -4,9 +4,6 @@
     <list default="true" id="a1b5f687-b215-48c0-a1c3-c49f78694e25" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Group-Signature-Schemes/src/One_way_accumulator/LargeInteger.java" beforeDir="false" afterPath="$PROJECT_DIR$/Group-Signature-Schemes/src/One_way_accumulator/LargeInteger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Group-Signature-Schemes/src/One_way_accumulator/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Group-Signature-Schemes/src/One_way_accumulator/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/One Way Accumulator Scheme/One_way_accumulator/LargeInteger.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/One Way Accumulator Scheme/One_way_accumulator/LargeInteger.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/One Way Accumulator Scheme/One_way_accumulator/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/One Way Accumulator Scheme/One_way_accumulator/Main.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,8 +20,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Group-Signature-Schemes/src/One_way_accumulator/LargeInteger.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="135" selection-start-line="135" selection-start-column="2" selection-end-line="137" selection-end-column="11" />
+            <state relative-caret-position="420">
+              <caret line="38" column="9" lean-forward="true" selection-start-line="38" selection-start-column="9" selection-end-line="38" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -32,7 +29,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Group-Signature-Schemes/src/One_way_accumulator/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
+            <state relative-caret-position="817">
               <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -159,7 +156,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552210681909" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552211427793" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
@@ -286,7 +283,7 @@
       <workItem from="1552021964707" duration="292000" />
       <workItem from="1552064178479" duration="768000" />
       <workItem from="1552073747178" duration="504000" />
-      <workItem from="1552156481207" duration="25380000" />
+      <workItem from="1552156481207" duration="26126000" />
     </task>
     <task id="LOCAL-00001" summary="Implemented the Binary Converter and the Multiple Precision Classical Multiplication">
       <created>1545660978217</created>
@@ -344,11 +341,18 @@
       <option name="project" value="LOCAL" />
       <updated>1551795683173</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Implemented karatsuba. Still, the threshold is high and wont be used.">
+      <created>1552210708701</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1552210708701</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="333357000" />
+    <option name="totallyTimeSpent" value="334103000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -446,7 +450,8 @@
     <MESSAGE value="Changed the timing method to be more accurate" />
     <MESSAGE value="large integer attempts" />
     <MESSAGE value="large integer attempts (add, naive multiply)" />
-    <option name="LAST_COMMIT_MESSAGE" value="large integer attempts (add, naive multiply)" />
+    <MESSAGE value="Implemented karatsuba. Still, the threshold is high and wont be used." />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented karatsuba. Still, the threshold is high and wont be used." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/One Way Accumulator Scheme/src/BinaryConverter.java" />
@@ -500,7 +505,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Group-Signature-Schemes/src/One_way_accumulator/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
+        <state relative-caret-position="817">
           <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -510,8 +515,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Group-Signature-Schemes/src/One_way_accumulator/LargeInteger.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="135" selection-start-line="135" selection-start-column="2" selection-end-line="137" selection-end-column="11" />
+        <state relative-caret-position="420">
+          <caret line="38" column="9" lean-forward="true" selection-start-line="38" selection-start-column="9" selection-end-line="38" selection-end-column="9" />
         </state>
       </provider>
     </entry>
