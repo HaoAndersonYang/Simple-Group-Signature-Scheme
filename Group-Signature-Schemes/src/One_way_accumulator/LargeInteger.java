@@ -96,7 +96,7 @@ public class LargeInteger {
             temp += a;
             temp += b;
             temp += cout;
-            cout = temp >> bits;
+            cout = temp >>> bits;
             resultMag[res_index] = temp & strip;
         }
         return new LargeInteger(resultMag, result_size);
@@ -147,15 +147,14 @@ public class LargeInteger {
             int this_index = this.size - i - 1;
             long a = this.mag[this_index];
             long cout = 0;
-            for (int j = 0; j < val.size; j++) {
+            for (int j = 0, res_index = result_size - i - 1; j < val.size; j++, res_index--) {
                 int val_index = val.size - j - 1;
                 long b = val.mag[val_index];
-                int res_index = result_size - i - j - 1;
                 long temp = 0;
                 temp += a * b;
                 temp += cout;
                 temp += resultMag[res_index];
-                cout = temp >> bits;
+                cout = temp >>> bits;
                 resultMag[res_index] = temp & strip;
             }
             //This should not cause out of bound since we are computing from lowest significant bit.
