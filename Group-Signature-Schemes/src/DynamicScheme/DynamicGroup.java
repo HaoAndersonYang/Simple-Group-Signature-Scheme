@@ -1,13 +1,11 @@
-package One_way_accumulator;
-
-import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
+package DynamicScheme;
 
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.Random;
 
-public class Group {
-    private static Group group;
+public class DynamicGroup {
+    private static DynamicGroup dynamicGroup;
     private BigInteger q;
     private BigInteger p;
     public BigInteger n;
@@ -27,20 +25,20 @@ public class Group {
     private final int bitlen = 100;
     private BigInteger accumulator = new BigInteger("2");//Initial value is base 2
 
-    private ArrayList<Member> members = new ArrayList<>();
+    private ArrayList<DynamicMember> dynamicMembers = new ArrayList<>();
 
-    private Group() {
+    private DynamicGroup() {
         while (lcm == null || lcm.mod(new BigInteger("3")).equals(BigInteger.ZERO)) {
             p = BigInteger.probablePrime(bitlen, new Random());
             q = BigInteger.probablePrime(bitlen, new Random());
-            System.out.println("p: " + p);
-            System.out.println("q: " + q);
+//            System.out.println("p: " + p);
+//            System.out.println("q: " + q);
             n = p.multiply(q);
-            System.out.println("n: " + n);
+//            System.out.println("n: " + n);
             BigInteger mul = (p.subtract(BigInteger.ONE)).multiply(q.subtract(BigInteger.ONE));
             BigInteger gcd = (p.subtract(BigInteger.ONE)).gcd(q.subtract(BigInteger.ONE));
             lcm = mul.divide(gcd);
-            System.out.println("lcm: " + lcm);
+//            System.out.println("lcm: " + lcm);
         }
         e = new BigInteger("3");
         d = e.modInverse(lcm);
@@ -56,30 +54,30 @@ public class Group {
         cyclicbase = cyclicK.multiply(n).add(BigInteger.ONE);
         cyclicmod = cyclicbase.subtract(BigInteger.ONE);
         g = cyclicPow(p, cyclicK);
-        System.out.println("cyclicmod " + cyclicmod);
-        System.out.println("cyclicbase " + cyclicbase);
-        System.out.println("llg: " + g);
+//        System.out.println("cyclicmod " + cyclicmod);
+//        System.out.println("cyclicbase " + cyclicbase);
+//        System.out.println("llg: " + g);
 //        System.out.println(cyclicPow(llg,n));
 //        while (index.compareTo(n) <= 0) {
 //            System.out.println(cyclicPow(llg, n));
 //            index = index.add(BigInteger.ONE);
 //        }
         a = BigInteger.probablePrime(bitlen, new Random());
-        System.out.println("a: " + a);
-
-        System.out.println("e: " + e);
-        System.out.println("d: " + d);
+//        System.out.println("a: " + a);
+//
+//        System.out.println("e: " + e);
+//        System.out.println("d: " + d);
     }
 
     public BigInteger cyclicPow(BigInteger base, BigInteger pow) {
         return base.modPow(pow, cyclicbase);
     }
 
-    public static Group getInstance() {
-        if (group == null) {
-            group = new Group();
+    public static DynamicGroup getInstance() {
+        if (dynamicGroup == null) {
+            dynamicGroup = new DynamicGroup();
         }
-        return group;
+        return dynamicGroup;
     }
 
     public BigInteger getCertificate(BigInteger y) {

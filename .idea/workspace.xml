@@ -2,9 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a1b5f687-b215-48c0-a1c3-c49f78694e25" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/One Way Accumulator Scheme/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Group-Signature-Schemes/src/OWASimpleScheme/OWAGroup.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Group-Signature-Schemes/src/OWASimpleScheme/OWAMember.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Group-Signature-Schemes/src/One_way_accumulator/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Group-Signature-Schemes/src/One_way_accumulator/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Group-Signature-Schemes/src/One_way_accumulator/Group.java" beforeDir="false" afterPath="$PROJECT_DIR$/Group-Signature-Schemes/src/DynamicScheme/DynamicGroup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Group-Signature-Schemes/src/One_way_accumulator/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Group-Signature-Schemes/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Group-Signature-Schemes/src/One_way_accumulator/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/Group-Signature-Schemes/src/DynamicScheme/DynamicMember.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Group-Signature-Schemes/src/One_way_accumulator/Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/Group-Signature-Schemes/src/DynamicScheme/Util.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,22 +23,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Group-Signature-Schemes/src/One_way_accumulator/Group.java">
+        <entry file="file://$PROJECT_DIR$/Group-Signature-Schemes/src/DynamicScheme/DynamicGroup.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Group-Signature-Schemes/src/One_way_accumulator/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="339">
-              <caret line="32" column="24" selection-start-line="32" selection-start-column="24" selection-end-line="32" selection-end-column="24" />
+            <state relative-caret-position="228">
+              <caret line="14" column="24" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -43,17 +35,43 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.8.0_192/src.zip!/java/math/BigInteger.java">
+        <entry file="file://$PROJECT_DIR$/Group-Signature-Schemes/src/DynamicScheme/DynamicMember.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="28386">
-              <caret line="1537" selection-start-line="1537" selection-end-line="1537" />
+            <state relative-caret-position="247">
+              <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Group-Signature-Schemes/src/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="305">
+              <caret line="24" column="40" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#22896#22897#0" expanded="true" />
-                <element signature="e#22925#22926#0" expanded="true" />
-                <element signature="e#23600#23601#0" expanded="true" />
-                <element signature="e#23649#23650#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Group-Signature-Schemes/src/OWASimpleScheme/OWAGroup.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="494">
+              <caret line="31" column="19" selection-start-line="31" selection-start-column="19" selection-end-line="31" selection-end-column="19" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Group-Signature-Schemes/src/OWASimpleScheme/OWAMember.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="228">
+              <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -78,7 +96,6 @@
       <find>shiftright</find>
       <find>insertathead</find>
       <find>remove</find>
-      <find>print</find>
       <find>r</find>
       <find>add</find>
       <find>compareTo</find>
@@ -99,6 +116,7 @@
       <find>copy</find>
       <find>shiftLeft</find>
       <find>prime</find>
+      <find>print</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -121,6 +139,17 @@
         <option value="$PROJECT_DIR$/One Way Accumulator Scheme/src/LargeInteger.java" />
         <option value="$PROJECT_DIR$/One Way Accumulator Scheme/src/Main.java" />
         <option value="$PROJECT_DIR$/Group-Signature-Schemes/src/One_way_accumulator/Main.java" />
+        <option value="$PROJECT_DIR$/Group-Signature-Schemes/src/DynamicScheme/Main.java" />
+        <option value="$PROJECT_DIR$/Group-Signature-Schemes/src/OWASimpleScheme/Member.java" />
+        <option value="$PROJECT_DIR$/Group-Signature-Schemes/src/OWASimpleScheme/Group.java" />
+        <option value="$PROJECT_DIR$/Group-Signature-Schemes/src/DynamicScheme/DynammicGroup.java" />
+        <option value="$PROJECT_DIR$/Group-Signature-Schemes/src/DynamicScheme/Group.java" />
+        <option value="$PROJECT_DIR$/Group-Signature-Schemes/src/DynamicScheme/Member.java" />
+        <option value="$PROJECT_DIR$/Group-Signature-Schemes/src/DynamicScheme/DynamicGroup.java" />
+        <option value="$PROJECT_DIR$/Group-Signature-Schemes/src/DynamicScheme/DynamicMember.java" />
+        <option value="$PROJECT_DIR$/Group-Signature-Schemes/src/OWASimpleScheme/OWAGroup.java" />
+        <option value="$PROJECT_DIR$/Group-Signature-Schemes/src/OWASimpleScheme/OWAMember.java" />
+        <option value="$PROJECT_DIR$/Group-Signature-Schemes/src/Main.java" />
       </list>
     </option>
   </component>
@@ -138,8 +167,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -163,7 +192,14 @@
               <item name="Simple-Group-Signature-Scheme" type="462c0819:PsiDirectoryNode" />
               <item name="Group-Signature-Schemes" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="One_way_accumulator" type="462c0819:PsiDirectoryNode" />
+              <item name="DynamicScheme" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Simple-Group-Signature-Scheme" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Simple-Group-Signature-Scheme" type="462c0819:PsiDirectoryNode" />
+              <item name="Group-Signature-Schemes" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="OWASimpleScheme" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -174,7 +210,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550522770809" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552869548293" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
@@ -192,7 +228,7 @@
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="One_way_accumulator.Main" />
+      <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="One Way Accumulator Scheme" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -292,6 +328,8 @@
       <workItem from="1546951056360" duration="1906000" />
       <workItem from="1547360568095" duration="1645000" />
       <workItem from="1547401114920" duration="3003000" />
+      <workItem from="1552795422731" duration="8018000" />
+      <workItem from="1552946788449" duration="1198000" />
     </task>
     <task id="LOCAL-00001" summary="Implemented the Binary Converter and the Multiple Precision Classical Multiplication">
       <created>1545660978217</created>
@@ -332,13 +370,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="253768000" />
+    <option name="totallyTimeSpent" value="264527000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.497921" visible="true" weight="0.3065032" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.497921" visible="true" weight="0.28411514" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -346,8 +384,8 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" sideWeight="0.502079" side_tool="true" weight="0.2531983" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32917964" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.43762994" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32848233" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.43762994" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -421,17 +459,7 @@
     <option name="LAST_COMMIT_MESSAGE" value="Found the threshold of the KA algorithm in my implementation." />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/One Way Accumulator Scheme/src/BinaryConverter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="30" selection-start-column="30" selection-end-column="30" />
-          <folding>
-            <element signature="e#245#246#0" expanded="true" />
-            <element signature="e#305#306#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/One Way Accumulator Scheme/src/BinaryConverter.java" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_192/src.zip!/java/lang/Math.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="307">
@@ -445,31 +473,9 @@
     </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Temp/7zEC0FC473F/updater-script" />
     <entry file="file://$USER_HOME$/AppData/Local/Temp/7zEC0FE970F/updater-script" />
-    <entry file="file://$PROJECT_DIR$/One Way Accumulator Scheme/src/Group.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="11" selection-start-column="11" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/One Way Accumulator Scheme/src/Bons.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1425">
-          <caret line="75" selection-start-line="75" selection-end-line="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/One Way Accumulator Scheme/src/LargeInteger.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1121">
-          <caret line="61" column="11" selection-start-line="61" selection-start-column="11" selection-end-line="61" selection-end-column="11" />
-          <folding>
-            <element signature="e#14247#14248#0" expanded="true" />
-            <element signature="e#14291#14292#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/One Way Accumulator Scheme/src/Group.java" />
+    <entry file="file://$PROJECT_DIR$/One Way Accumulator Scheme/src/Bons.java" />
+    <entry file="file://$PROJECT_DIR$/One Way Accumulator Scheme/src/LargeInteger.java" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_192/src.zip!/java/lang/System.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
@@ -479,8 +485,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/One Way Accumulator Scheme/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+        <state relative-caret-position="323">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -501,20 +507,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Group-Signature-Schemes/src/One_way_accumulator/Group.java">
+    <entry file="file://$PROJECT_DIR$/Group-Signature-Schemes/src/DynamicScheme/DynamicGroup.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+        <state relative-caret-position="228">
+          <caret line="14" column="24" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Group-Signature-Schemes/src/One_way_accumulator/Main.java">
+    <entry file="file://$PROJECT_DIR$/Group-Signature-Schemes/src/DynamicScheme/DynamicMember.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="32" column="24" selection-start-line="32" selection-start-column="24" selection-end-line="32" selection-end-column="24" />
+        <state relative-caret-position="247">
+          <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Group-Signature-Schemes/src/OWASimpleScheme/OWAGroup.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="31" column="19" selection-start-line="31" selection-start-column="19" selection-end-line="31" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Group-Signature-Schemes/src/OWASimpleScheme/OWAMember.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Group-Signature-Schemes/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="24" column="40" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
