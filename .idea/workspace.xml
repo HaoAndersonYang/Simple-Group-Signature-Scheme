@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a1b5f687-b215-48c0-a1c3-c49f78694e25" name="Default Changelist" comment="" />
+    <list default="true" id="a1b5f687-b215-48c0-a1c3-c49f78694e25" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Group-Signature-Schemes/src/DynamicScheme/DynamicGroup.java" beforeDir="false" afterPath="$PROJECT_DIR$/Group-Signature-Schemes/src/DynamicScheme/DynamicGroup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Group-Signature-Schemes/src/DynamicScheme/DynamicMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/Group-Signature-Schemes/src/DynamicScheme/DynamicMember.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Group-Signature-Schemes/src/DynamicScheme/Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/Group-Signature-Schemes/src/DynamicScheme/Util.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Group-Signature-Schemes/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Group-Signature-Schemes/src/Main.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,56 +20,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Group-Signature-Schemes/src/DynamicScheme/DynamicGroup.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="551">
-              <caret line="31" column="40" selection-start-line="31" selection-start-column="40" selection-end-line="31" selection-end-column="40" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Group-Signature-Schemes/src/DynamicScheme/DynamicMember.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Group-Signature-Schemes/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="362">
-              <caret line="23" column="38" lean-forward="true" selection-start-line="23" selection-start-column="38" selection-end-line="23" selection-end-column="38" />
+            <state relative-caret-position="320">
+              <caret line="31" column="49" selection-start-line="31" selection-start-column="49" selection-end-line="31" selection-end-column="49" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Group-Signature-Schemes/src/OWASimpleScheme/OWAGroup.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="532">
-              <caret line="35" column="19" selection-start-line="35" selection-start-column="19" selection-end-line="35" selection-end-column="19" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Group-Signature-Schemes/src/OWASimpleScheme/OWAMember.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -79,9 +43,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>mag</find>
-      <find>strip</find>
-      <find>striplead</find>
       <find>shift</find>
       <find>shiftRight</find>
       <find>shiftRightImpl</find>
@@ -109,6 +70,9 @@
       <find>shiftLeft</find>
       <find>prime</find>
       <find>print</find>
+      <find>powermod</find>
+      <find>modPow</find>
+      <find>modpow</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -137,10 +101,11 @@
         <option value="$PROJECT_DIR$/Group-Signature-Schemes/src/DynamicScheme/DynammicGroup.java" />
         <option value="$PROJECT_DIR$/Group-Signature-Schemes/src/DynamicScheme/Group.java" />
         <option value="$PROJECT_DIR$/Group-Signature-Schemes/src/DynamicScheme/Member.java" />
-        <option value="$PROJECT_DIR$/Group-Signature-Schemes/src/DynamicScheme/DynamicGroup.java" />
-        <option value="$PROJECT_DIR$/Group-Signature-Schemes/src/DynamicScheme/DynamicMember.java" />
         <option value="$PROJECT_DIR$/Group-Signature-Schemes/src/OWASimpleScheme/OWAGroup.java" />
         <option value="$PROJECT_DIR$/Group-Signature-Schemes/src/OWASimpleScheme/OWAMember.java" />
+        <option value="$PROJECT_DIR$/Group-Signature-Schemes/src/DynamicScheme/Util.java" />
+        <option value="$PROJECT_DIR$/Group-Signature-Schemes/src/DynamicScheme/DynamicMember.java" />
+        <option value="$PROJECT_DIR$/Group-Signature-Schemes/src/DynamicScheme/DynamicGroup.java" />
         <option value="$PROJECT_DIR$/Group-Signature-Schemes/src/Main.java" />
       </list>
     </option>
@@ -191,6 +156,11 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="OWASimpleScheme" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Simple-Group-Signature-Scheme" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Simple-Group-Signature-Scheme" type="462c0819:PsiDirectoryNode" />
+              <item name="One Way Accumulator Scheme" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -202,7 +172,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552869548293" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556867783302" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
@@ -375,11 +345,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="278635000" />
+    <option name="totallyTimeSpent" value="282563000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.497921" visible="true" weight="0.108742006" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -390,8 +359,8 @@
       <window_info id="Favorites" order="6" sideWeight="0.502079" side_tool="true" weight="0.2531983" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32848233" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.43762994" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.43762994" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3991684" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -513,23 +482,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Group-Signature-Schemes/src/DynamicScheme/DynamicGroup.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="551">
-          <caret line="31" column="40" selection-start-line="31" selection-start-column="40" selection-end-line="31" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Group-Signature-Schemes/src/DynamicScheme/DynamicMember.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Group-Signature-Schemes/src/OWASimpleScheme/OWAGroup.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="532">
@@ -547,10 +499,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Group-Signature-Schemes/src/DynamicScheme/DynamicGroup.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="551">
+          <caret line="73" lean-forward="true" selection-start-line="73" selection-end-line="73" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2745#2746#0" expanded="true" />
+            <element signature="e#2796#2797#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Group-Signature-Schemes/src/DynamicScheme/DynamicMember.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="35" column="39" lean-forward="true" selection-start-line="35" selection-start-column="39" selection-end-line="35" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Group-Signature-Schemes/src/DynamicScheme/Util.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="136" column="51" selection-start-line="136" selection-start-column="51" selection-end-line="136" selection-end-column="51" />
+          <folding>
+            <element signature="e#297#298#0" expanded="true" />
+            <element signature="e#339#340#0" expanded="true" />
+            <element signature="e#389#390#0" expanded="true" />
+            <element signature="e#442#443#0" expanded="true" />
+            <element signature="e#513#514#0" expanded="true" />
+            <element signature="e#546#547#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Group-Signature-Schemes/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
-          <caret line="23" column="38" lean-forward="true" selection-start-line="23" selection-start-column="38" selection-end-line="23" selection-end-column="38" />
+        <state relative-caret-position="320">
+          <caret line="31" column="49" selection-start-line="31" selection-start-column="49" selection-end-line="31" selection-end-column="49" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

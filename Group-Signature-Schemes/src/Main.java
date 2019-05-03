@@ -8,6 +8,7 @@ import java.math.BigInteger;
 import java.util.Random;
 
 public class Main {
+
     public static void main(String[] args) {
         DynamicGroup dynamicGroup = DynamicGroup.getInstance();
         OWAGroup owaGroup = OWAGroup.getInstance();
@@ -19,8 +20,8 @@ public class Main {
         long time_dynamic = 0;
         long time_owa = 0;
         int count = 0;
-        int transaction = 10;
-        while (time_owa <= time_dynamic) {
+        int transaction = 5;
+        while (time_owa <= Util.getModPowTime()) {
             BigInteger tmp = new BigInteger(dynamicGroup.lambda, new Random());
             count++;
             long t = System.nanoTime();
@@ -38,9 +39,8 @@ public class Main {
             time_owa += System.nanoTime() - t;
             System.out.println(count);
         }
-
+        System.out.println(time_dynamic);
+        System.out.println(Util.getModPowTime());
         System.out.println(count);
-
-
     }
 }

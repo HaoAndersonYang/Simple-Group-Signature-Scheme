@@ -6,6 +6,22 @@ import java.security.NoSuchAlgorithmException;
 import java.util.Random;
 
 public class Util {
+
+    private static long modPowTime = 0;
+    private static long currentTime;
+
+    public static void modpowTimeBeginCollection() {
+        currentTime = System.nanoTime();
+    }
+
+    public static void modpowTimeEndCollection() {
+        modPowTime += System.nanoTime() - currentTime;
+    }
+
+    public static long getModPowTime(){
+        return modPowTime;
+    }
+
     public static String hash(BigInteger input) {
         MessageDigest mDigest = null;
         try {
@@ -48,7 +64,9 @@ public class Util {
         BigInteger[] si = new BigInteger[dynamicGroup.l + 1];
         for (int i = 1; i <= dynamicGroup.l; i++) {
             si[i] = new BigInteger((int) (dynamicGroup.eps * dynamicGroup.lambda), new Random());
+            modpowTimeBeginCollection();
             BigInteger ti = dynamicGroup.cyclicPow(g, dynamicGroup.a.modPow(si[i], dynamicGroup.n));
+            modpowTimeEndCollection();
 //            BigInteger test = dynamicGroup.cyclicPow(lly, dynamicGroup.a.modPow(si[i].subtract(x), dynamicGroup.cyclicmod));
 //            System.out.println(test.compareTo(ti));
             c.append(ti.toString(2));
@@ -75,9 +93,13 @@ public class Util {
         for (int i = 1; i <= dynamicGroup.l; i++) {
             BigInteger ti;
             if (tuple.c.charAt(i) == '0') {
+                modpowTimeBeginCollection();
                 ti = dynamicGroup.cyclicPow(g, dynamicGroup.a.modPow(tuple.si[i], dynamicGroup.cyclicmod));
+                modpowTimeEndCollection();
             } else {
+                modpowTimeBeginCollection();
                 ti = dynamicGroup.cyclicPow(y, dynamicGroup.a.modPow(tuple.si[i], dynamicGroup.cyclicmod));
+                modpowTimeEndCollection();
             }
             c.append(ti.toString(2));
         }
@@ -121,7 +143,10 @@ public class Util {
         BigInteger[] si = new BigInteger[dynamicGroup.l + 1];
         for (int i = 1; i <= dynamicGroup.l; i++) {
             si[i] = new BigInteger(dynamicGroup.n.bitLength(), new Random());
+            modpowTimeBeginCollection();
             BigInteger ti = dynamicGroup.cyclicPow(g, si[i].modPow(dynamicGroup.e, dynamicGroup.cyclicmod));
+            modpowTimeEndCollection();
+
 //            System.out.println(si[i]);
 //            BigInteger test = dynamicGroup.cyclicPow(lly, dynamicGroup.a.modPow(si[i].subtract(x), dynamicGroup.cyclicmod));
 //            System.out.println(test.compareTo(ti));
@@ -160,9 +185,13 @@ public class Util {
         for (int i = 1; i <= dynamicGroup.l; i++) {
             BigInteger ti;
             if (tuple.c.charAt(i) == '0') {
+                modpowTimeBeginCollection();
                 ti = dynamicGroup.cyclicPow(g, tuple.si[i].modPow(dynamicGroup.e, dynamicGroup.n));
+                modpowTimeEndCollection();
             } else {
+                modpowTimeBeginCollection();
                 ti = dynamicGroup.cyclicPow(y, tuple.si[i].modPow(dynamicGroup.e, dynamicGroup.n));
+                modpowTimeEndCollection();
             }
             c.append(ti.toString(2));
         }

@@ -46,7 +46,6 @@ public class DynamicGroup {
 //        while (llg.compareTo(n) >= 0 || n.remainder(llg).equals(BigInteger.ZERO)) {
 //            llg = BigInteger.probablePrime(bitlen, new Random());
 //        }
-        //TODO: CHECK THIS
         cyclicK = BigInteger.ONE;
         while (!(cyclicK.multiply(n).add(BigInteger.ONE)).isProbablePrime(20000)) {
             cyclicK = cyclicK.add(BigInteger.ONE);
@@ -81,6 +80,7 @@ public class DynamicGroup {
     }
 
     public BigInteger getCertificate(BigInteger y) {
-        return (y.add(BigInteger.ONE)).modPow(d, n);
+        BigInteger temp = (y.add(BigInteger.ONE));
+        return temp.modPow(d, n);
     }
 }
