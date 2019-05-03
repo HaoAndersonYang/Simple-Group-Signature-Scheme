@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a1b5f687-b215-48c0-a1c3-c49f78694e25" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Group-Signature-Schemes/src/OWASimpleScheme/OWAGroup.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Group-Signature-Schemes/src/OWASimpleScheme/OWAMember.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Group-Signature-Schemes/src/One_way_accumulator/Group.java" beforeDir="false" afterPath="$PROJECT_DIR$/Group-Signature-Schemes/src/DynamicScheme/DynamicGroup.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Group-Signature-Schemes/src/One_way_accumulator/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Group-Signature-Schemes/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Group-Signature-Schemes/src/One_way_accumulator/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/Group-Signature-Schemes/src/DynamicScheme/DynamicMember.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Group-Signature-Schemes/src/One_way_accumulator/Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/Group-Signature-Schemes/src/DynamicScheme/Util.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Group-Signature-Schemes/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Group-Signature-Schemes/src/Main.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,8 +20,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Group-Signature-Schemes/src/DynamicScheme/DynamicGroup.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="14" column="24" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
+            <state relative-caret-position="551">
+              <caret line="31" column="40" selection-start-line="31" selection-start-column="40" selection-end-line="31" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -46,8 +41,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Group-Signature-Schemes/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="305">
-              <caret line="24" column="40" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
+            <state relative-caret-position="362">
+              <caret line="23" column="79" lean-forward="true" selection-start-line="23" selection-start-column="79" selection-end-line="23" selection-end-column="79" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -58,8 +53,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Group-Signature-Schemes/src/OWASimpleScheme/OWAGroup.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="494">
-              <caret line="31" column="19" selection-start-line="31" selection-start-column="19" selection-end-line="31" selection-end-column="19" />
+            <state relative-caret-position="532">
+              <caret line="35" column="19" selection-start-line="35" selection-start-column="19" selection-end-line="35" selection-end-column="19" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -154,8 +149,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="88" />
-    <option name="y" value="-10" />
+    <option name="x" value="258" />
+    <option name="y" value="40" />
     <option name="width" value="1400" />
     <option name="height" value="1000" />
   </component>
@@ -167,8 +162,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -205,6 +198,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -329,7 +324,13 @@
       <workItem from="1547360568095" duration="1645000" />
       <workItem from="1547401114920" duration="3003000" />
       <workItem from="1552795422731" duration="8018000" />
-      <workItem from="1552946788449" duration="1198000" />
+      <workItem from="1552946788449" duration="1228000" />
+      <workItem from="1552991180350" duration="4279000" />
+      <workItem from="1553887169224" duration="702000" />
+      <workItem from="1556021528961" duration="1862000" />
+      <workItem from="1556480283592" duration="1419000" />
+      <workItem from="1556611630993" duration="4815000" />
+      <workItem from="1556858724701" duration="724000" />
     </task>
     <task id="LOCAL-00001" summary="Implemented the Binary Converter and the Multiple Precision Classical Multiplication">
       <created>1545660978217</created>
@@ -366,17 +367,24 @@
       <option name="project" value="LOCAL" />
       <updated>1546223967254</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Timing for both both scheme">
+      <created>1552961771613</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1552961771613</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="264527000" />
+    <option name="totallyTimeSpent" value="278358000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.497921" visible="true" weight="0.28411514" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.497921" visible="true" weight="0.108742006" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -456,7 +464,8 @@
     <MESSAGE value="Added a lot of comments." />
     <MESSAGE value="Fixed bugs in KA multiply and CM multiply.&#10;&#10;Implemented naive multiply method for comparison.&#10;&#10;For some reason KA multiply is MUCH slower than CM multiply. I will investigate this." />
     <MESSAGE value="Found the threshold of the KA algorithm in my implementation." />
-    <option name="LAST_COMMIT_MESSAGE" value="Found the threshold of the KA algorithm in my implementation." />
+    <MESSAGE value="Timing for both both scheme" />
+    <option name="LAST_COMMIT_MESSAGE" value="Timing for both both scheme" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/One Way Accumulator Scheme/src/BinaryConverter.java" />
@@ -509,8 +518,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Group-Signature-Schemes/src/DynamicScheme/DynamicGroup.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="14" column="24" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
+        <state relative-caret-position="551">
+          <caret line="31" column="40" selection-start-line="31" selection-start-column="40" selection-end-line="31" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -526,8 +535,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Group-Signature-Schemes/src/OWASimpleScheme/OWAGroup.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="31" column="19" selection-start-line="31" selection-start-column="19" selection-end-line="31" selection-end-column="19" />
+        <state relative-caret-position="532">
+          <caret line="35" column="19" selection-start-line="35" selection-start-column="19" selection-end-line="35" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -543,8 +552,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Group-Signature-Schemes/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="24" column="40" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
+        <state relative-caret-position="362">
+          <caret line="23" column="79" lean-forward="true" selection-start-line="23" selection-start-column="79" selection-end-line="23" selection-end-column="79" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

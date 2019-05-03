@@ -16,34 +16,30 @@ public class Main {
 
         BigInteger b = new BigInteger(dynamicGroup.lambda, new Random());
 
-        int num_of_members = 600;
         long time_dynamic = 0;
-        for (int i = 0; i < num_of_members; i++) {
+        long time_owa = 0;
+        int count = 0;
+        int transaction = 10;
+        while (time_owa <= time_dynamic) {
             BigInteger tmp = new BigInteger(dynamicGroup.lambda, new Random());
+            count++;
             long t = System.nanoTime();
             DynamicMember amem = new DynamicMember(tmp);
-            amem.signMessage("message");
+            for (int i = 0; i < transaction; i++) {
+                amem.signMessage("message");
+            }
             time_dynamic += System.nanoTime() - t;
-        }
-        System.out.println("Dynamic Scheme: " + num_of_members + " users: " + time_dynamic);
-
-        long time_owa = 0;
-        for (int i = 0; i < num_of_members; i++) {
-            BigInteger tmp = new BigInteger(dynamicGroup.lambda, new Random());
             OWAMember member = new OWAMember(tmp, BigInteger.ONE);
-            long t = System.nanoTime();
+            t = System.nanoTime();
             owaGroup.addMember(member);
-            member.showIdentity();
+            for (int i = 0; i < transaction; i++) {
+                member.showIdentity();
+            }
             time_owa += System.nanoTime() - t;
+            System.out.println(count);
         }
-        System.out.println("Simple Scheme: " + num_of_members + " users:  " + time_owa);
-//        DynamicMember.MessageSignature signature = amem.signMessage("HELLO");
-//        amem.SkLogLogTest("HELLO");
-//        System.out.println();
-//        System.out.println(Util.SKLOGLOGtest(signature.LoglogResults, signature.message, signature.lly, signature.llg));
-//        System.out.println();
-//        System.out.println(Util.SKROOTLOGtest(signature.RootlogResults, signature.message, signature.rly, signature.rlg));
-//        System.out.println();
+
+        System.out.println(count);
 
 
     }
